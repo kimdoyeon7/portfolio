@@ -1,0 +1,134 @@
+// 전체넓이는 1600px
+$colorMain1: #ED4264;
+$colorMain2: #FFEDBC;
+$colorMain3: #FFD4D4;
+$fontNotoSerif:'Noto Serif KR',sans-serif;
+$fontInter:'inter',sans-serif;
+$fontCormorant:'cormorant garamond',sans-serif;
+$fontW300:300;
+$fontW400:400;
+$fontW500:500;
+$fontW600:600;
+$fontW700:700;
+$fontW800:800;
+$fontW900:900;
+@mixin bigLayout {width:1600px; height:100vh; margin:0 auto;}
+@mixin title {font-size:3rem; font-family: $fontInter; font-weight: $fontW800; padding:100px 0;}
+@mixin title2 {font-size:1.5rem; font-family: $fontInter; font-weight: $fontW800;}
+
+//s:wrap
+.wrap{
+    #intro {
+        margin: 0px auto; width: 100%; height: 100vh;
+        background: radial-gradient(rgb(237, 66, 100,0.5), rgb(255, 237, 188,0.3) 70%);
+        .container {
+            h1 { padding-top:220px; padding-left:200px; width:1800px;
+                img {width:100%;}
+                // font-size:8rem; line-height:1.5; font-family: $fontCormorant; font-weight:$fontW700;
+            }
+            p {margin:150px auto 0; width:50px;
+                img{width:100%;}
+            }
+        }
+    } // e:intro
+    #info{
+        width: 100%; height: 100vh;
+        background: radial-gradient(at 30%,rgb(237, 66, 100,0.5), rgb(255, 237, 188,0.3) 70%);
+        .container{
+            width:1600px; margin:0 auto; height:100vh;
+            display:flex; 
+            // justify-content: space-around; 
+            justify-content:center; 
+            align-items: center;
+            h1 {
+                width:500px;
+                margin-right:200px;
+                img{width:100%;}
+            }
+            .contents {
+                display:flex;
+                .aboutMe, .skillTool {
+                    h2 {font-size:2.7rem; font-family: $fontCormorant; font-weight:$fontW700; margin-bottom: 20px;}
+                }
+                .aboutMe {
+                    margin-right:50px;
+                    dl {
+                        display:grid;
+                        grid-template-columns:1fr 2fr;
+                        > * {margin:10px 0;}
+                        dt{font-family: $fontNotoSerif; font-size:1.2rem; font-weight: $fontW600; margin-right:20px;}//e:dt
+                        dd{font-family: $fontNotoSerif; font-size:1.2rem; line-height:1.5;}//e:dd
+                    }
+                }//e:aboutME
+                .skillTool {
+                    ul {display:grid; grid-template-columns: repeat(3,1fr);
+                        li {
+                            display:inline-block; width:50px;
+                            margin:10px 15px 10px 0;
+                            img{width:100%;}
+                        }
+                    }
+                }//e:skilltool
+            }//e:contents
+        }//e:container
+    }
+    #banner {
+        .container{
+            @include bigLayout(); 
+            background-color: yellow;
+            h1 {
+                @include title; 
+            }
+            .swiper-container {
+                .contents {
+                    display:flex; justify-content:center;
+                    background: linear-gradient(to right, rgb(237, 66, 100), rgb(255, 237, 188));
+                    .swiper-slide {
+                        width:400px;
+                        margin: 0 20px;
+                        a{
+                            img{width:100%;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #detail {
+        .container {
+            @include bigLayout();
+            background-color: aquamarine;
+            h1 {@include title();}
+            .detail_contents {
+                display:grid; grid-template-columns: repeat(3,1fr);
+                .contents {
+                    justify-content: center; 
+                    text-align: center;
+                    h2 {
+                        background-color: #ED4264;
+                        display:inline-block;
+                        @include title2(); margin-bottom:10px; text-align:left;
+                        width:380px;
+                    }
+                    a {background-color:#FFD4D4;
+                        display:inline-block;
+                        width:380px;
+                        position:relative;
+                        img{width:100%;}
+                        p {
+                            @include title2(); 
+                            font-size:2rem;
+                            font-weight:700;
+                            position:absolute; left:130px; top:180px;
+                            // 포지션 위치 조정해야함.
+                            // background-color: #fff; 
+                            padding:30px 10px;
+                            border:2px solid #000;
+                            border-radius:150px;
+                        }
+                    }
+                } //e:공통 contents
+            }
+        }
+    }
+} // e:wrap 
