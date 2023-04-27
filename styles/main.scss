@@ -2,9 +2,11 @@
 $colorMain1: #ED4264;
 $colorMain2: #FFEDBC;
 $colorMain3: #FFD4D4;
-$fontNotoSerif:'Noto Serif KR',sans-serif;
+$colorMain4: #A6A5A5;
+$colorB:#000;
+$fontNotoSerif:'Noto Serif KR',serif;
 $fontInter:'inter',sans-serif;
-$fontCormorant:'cormorant garamond',sans-serif;
+$fontCormorant:'cormorant garamond',serif;
 $fontW300:300;
 $fontW400:400;
 $fontW500:500;
@@ -15,16 +17,19 @@ $fontW900:900;
 @mixin bigLayout {width:1600px; height:100vh; margin:0 auto;}
 @mixin title {font-size:3rem; font-family: $fontInter; font-weight: $fontW800; padding:100px 0;}
 @mixin title2 {font-size:1.5rem; font-family: $fontInter; font-weight: $fontW800;}
+@mixin title3 {font-size:1.7rem; font-family: $fontInter; font-weight: $fontW800;}
+@mixin titleBig {font-size:7rem; line-height:1.5; font-family: $fontCormorant; font-weight:$fontW700;}
+
 
 //s:wrap
 .wrap{
+    overflow-x: hidden;
     #intro {
         margin: 0px auto; width: 100%; height: 100vh;
         background: radial-gradient(rgb(237, 66, 100,0.5), rgb(255, 237, 188,0.3) 70%);
         .container {
-            h1 { padding-top:220px; padding-left:200px; width:1800px;
+            h1 {padding-top:220px; padding-left:200px; width:1800px;
                 img {width:100%;}
-                // font-size:8rem; line-height:1.5; font-family: $fontCormorant; font-weight:$fontW700;
             }
             p {margin:150px auto 0; width:50px;
                 img{width:100%;}
@@ -128,6 +133,122 @@ $fontW900:900;
                         }
                     }
                 } //e:공통 contents
+            }
+        }
+    }
+    #redesign {
+        .container {
+            background-color: #FFEDBC;
+            @include bigLayout();
+            h1{@include title();}
+            .swiper-container {
+                .swiper-wrapper{
+                    .swiper-slide {
+                        h2 {
+                            @include title2();color:$colorMain4;
+                            margin-bottom:20px;
+                            span {@include title2(); color:$colorB; }
+                        }
+                        .contents{
+                            display:flex;
+                            // background-color:pink;
+                            position:relative;
+                            .redesign_img {
+                                width:600px;
+                                position:relative;
+                                z-index:999;
+                                img {width:100%;}
+                            }
+                            .contents_info {
+                                display: grid; grid-template-columns: repeat(2,1fr);
+                                // border:2px solid #000;
+                                height:max-content;
+                                position:absolute; top:70px; right:150px;
+                                background-color: aqua;
+                                .page_info {
+                                    width:300px; 
+                                    height:180px;
+                                    margin:15px 30px;
+                                    z-index:999;
+                                    h3 {@include title3(); margin-bottom:10px;}
+                                    dl {
+                                        display:grid; grid-template-columns:1fr 3fr;
+                                        > * {line-height: 1.5;}
+                                        dt {font-size:1.1rem; font-weight:700;}
+                                        dd {}
+                                    }
+                                }
+                                .work_info {
+                                    // background-color: #ED4264; border:2px solid green;
+                                }
+                                .color_used {
+                                    background-color: lightblue;
+                                    > * > * {font-size:1.1rem; font-weight:700;}
+                                    h3{}
+                                    .color_top {
+                                        p {
+                                            background-color: plum;
+                                            line-height:50px;
+                                            margin-bottom:10px;
+                                        }
+                                    }
+                                    .color_bottom {
+                                        display: flex; justify-content: space-between;
+                                        p:first-child {
+                                            background-color: #eee;
+                                            display:inline-block;
+                                            line-height:50px;
+                                            width:180px;
+                                        }
+                                        p:last-child {
+                                            background-color: yellow;
+                                            display:inline-block;
+                                            line-height:50px;
+                                            width:200px;
+                                        }
+                                    }
+                                }
+                                .over_view {
+                                    background-color: lightseagreen;
+                                    p {line-height: 1.5;}
+                                }
+                                .all_link {
+                                    // background-color: seagreen;
+                                    font-size:1.1rem; font-weight:700;
+                                    text-align: center;
+                                    a {
+                                        background-color:$colorMain2;
+                                        display:inline-block; width:45%;
+                                        padding:15px;
+                                        border-radius: 50px;
+                                        margin:10px 0;
+                                        border:1px solid $colorB;
+                                    }
+                                    .active {background-color: $colorMain1; border:1px solid $colorB;}
+                                }
+                            }//e:contents_info
+                            .contents_info::before {
+                                content:'ee'; width:1000%; height:100%; display:inline-block; 
+                                background-color:red; 
+                                position:absolute; left:-200px; z-index: 888;
+                            }
+                        }//e:contents
+                    }// e: swiper-slide
+                }//e:swiper-wrapper
+            }//e:swiper-container
+        }//e:container
+    }
+    #footer {
+        .container {
+            @include bigLayout();
+            background-color: $colorMain3;
+            position:relative;
+            h1 {@include titleBig; padding:100px;}
+            p {padding-top:350px; padding-left:50px; line-height:1.5;}
+            .arrow {
+                position:absolute; right:100px; top:100px;
+                width:50px;
+                img{width:100%;}
             }
         }
     }
