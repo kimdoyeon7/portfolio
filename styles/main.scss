@@ -126,33 +126,52 @@ $fontW900:900;
     #banner {
         .container{
             @include bigLayout(); 
-            // background-color: lightcyan;
+            background-color: lightcyan;
             h1 {@include title();}
             .container_btm{
-                // background:linear-gradient(to left,rgba(255, 237, 188, 1), rgba(237, 66, 100, 1),rgba(255, 237, 188, 1));
                 position:relative;
                 margin:80px 0 0;
-                .all_conents {
+                // overflow:hidden;
+                .all_contents {
                     background:linear-gradient(to left,rgba(255, 237, 188, 1), rgba(237, 66, 100, 1),rgba(255, 237, 188, 1));
-                    width:90%;
-                    height:400px;
+                    overflow-Y:visible;
+                    overflow-x:hidden;
+                    // display:flex; flex-flow:row wrap; align-content: center;
+                    width:80%;
+                    height:380px;
+                    // height:max-content;
                     .contents {
+                        // overflow: visible;
                         .swiper-slide {
+                            display:flex; flex-flow:row wrap; align-content: center;
+                            // overflow: visible;
+                            overflow:hidden;
                             a {
-                                display:block;
                                 img{width:100%;}
                             }
                         }//e:swiper-slide
+                        .active {
+                            transform:scale(1.2);
+                            // overflow-y: visible;
+                            overflow: visible;
+                        }
+                        // .active_none {transform:scale(1); overflow:hidden;}
                     }//e:contents
                     
                 }//e:all_contents
                 .swiper-pagination {
                     // background: lime;
-                    bottom:-25px;
+                    display:flex; justify-content: center; align-items: center;
+                    bottom:-70px;
                 }
                 .swiper-pagination-bullet {
-                    background-color: #ED4264;
+                    // background:$colorMain3;
+                    // width:10px; height:10px; opacity: 1; 
+                    width:10px; height:10px; background:transparent; border: 1px solid $colorMain3; opacity: 1; 
                 }
+                .swiper-pagination-bullet:hover {transform:scale(1.5);}
+                .swiper-pagination-bullet-active { width:50px; height:15px; border-radius: 10px; background: $colorMain3; border: 1px solid transparent;}
+                .swiper-pagination-bullet-active:hover {transform:scale(1);}
                 .swiper-button-next:after,
                 .swiper-button-prev:after {
                     display: none;

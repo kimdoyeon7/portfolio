@@ -137,6 +137,7 @@
   width: 1600px;
   height: 100vh;
   margin: 0 auto;
+  background-color: lightcyan;
 }
 .wrap #banner .container h1 {
   font-size: 3rem;
@@ -148,22 +149,51 @@
   position: relative;
   margin: 80px 0 0;
 }
-.wrap #banner .container .container_btm .all_conents {
+.wrap #banner .container .container_btm .all_contents {
   background: linear-gradient(to left, rgb(255, 237, 188), rgb(237, 66, 100), rgb(255, 237, 188));
-  width: 90%;
-  height: 400px;
+  overflow-Y: visible;
+  overflow-x: hidden;
+  width: 80%;
+  height: 380px;
 }
-.wrap #banner .container .container_btm .all_conents .contents .swiper-slide a {
-  display: block;
+.wrap #banner .container .container_btm .all_contents .contents .swiper-slide {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  overflow: hidden;
 }
-.wrap #banner .container .container_btm .all_conents .contents .swiper-slide a img {
+.wrap #banner .container .container_btm .all_contents .contents .swiper-slide a img {
   width: 100%;
 }
+.wrap #banner .container .container_btm .all_contents .contents .active {
+  transform: scale(1.2);
+  overflow: visible;
+}
 .wrap #banner .container .container_btm .swiper-pagination {
-  bottom: -25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: -70px;
 }
 .wrap #banner .container .container_btm .swiper-pagination-bullet {
-  background-color: #ED4264;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border: 1px solid #FFD4D4;
+  opacity: 1;
+}
+.wrap #banner .container .container_btm .swiper-pagination-bullet:hover {
+  transform: scale(1.5);
+}
+.wrap #banner .container .container_btm .swiper-pagination-bullet-active {
+  width: 50px;
+  height: 15px;
+  border-radius: 10px;
+  background: #FFD4D4;
+  border: 1px solid transparent;
+}
+.wrap #banner .container .container_btm .swiper-pagination-bullet-active:hover {
+  transform: scale(1);
 }
 .wrap #banner .container .container_btm .swiper-button-next:after,
 .wrap #banner .container .container_btm .swiper-button-prev:after {
