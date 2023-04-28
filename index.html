@@ -8,8 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KIMDOEYON | Portfolio</title>
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <!-- swiper cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.js" integrity="sha512-hJrV+LKHbu+Hxkn/+ZwGOCMUkap0ZfjJbca9WT38z69+MYmRzMlvUd401TOs1b4byAm4fGDESpEcCbG2A6cibQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.css" integrity="sha512-0x5peylECh6ad58xDrjrNZL87Zhg9rdda76yOOHrfGr41VSEwUNmYaK72U/JVScMbSWG1n4Vj35LGmq8ggsqaQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- style css -->
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/main.css">
+
 </head>
 <body>
     <div class="nav">
@@ -33,7 +38,17 @@
                 <h1><img src="./images/info_bg_03.png" alt="I want be Publisher,Designer"></h1>
                 <div class="contents">
                     <div class="aboutMe">
-                        <h2>About me.</h2>
+                        <!-- <h2>About me.</h2> -->
+                        <h2>
+                            <span>A</span>
+                            <span>b</span>
+                            <span>o</span>
+                            <span>u</span>
+                            <span>t</span>
+                            <span>m</span>
+                            <span>e</span>
+                            <span>.</span>
+                        </h2>
                         <dl>
                             <dt>Name</dt>
                             <dd>김도연</dd>
@@ -48,7 +63,19 @@
                         </dl>
                     </div>
                     <div class="skillTool">
-                        <h2>Skill tool.</h2>
+                        <!-- <h2>Skill tool.</h2> -->
+                        <h2>
+                            <span>S</span>
+                            <span>k</span>
+                            <span>i</span>
+                            <span>l</span>
+                            <span>l</span>
+                            <span>t</span>
+                            <span>o</span>
+                            <span>o</span>
+                            <span>l</span>
+                            <span>.</span>
+                        </h2>
                         <ul>
                             <li><img src="./images/info_icons_html.png" alt="html"></li>
                             <li><img src="./images/info_icons_css.png" alt="css"></li>
@@ -69,16 +96,26 @@
             <div class="container">
                 <h1>BANNER DESIGN</h1>
                 <!-- javascript - plugin -->
-                <div class="swiper-container">
-                    <div class="swiper-wrapper contents">
-                        <div class="swiper-slide banner banner1"><a href="#"><img src="./images/noimg.jpg" alt=""></a></div>
-                        <div class="swiper-slide banner banner2"><a href="#"><img src="./images/noimg.jpg" alt=""></a></div>
-                        <div class="swiper-slide banner banner3"><a href="#"><img src="./images/noimg.jpg" alt=""></a></div>
+                <div class="container_btm">
+                    <div class="swiper all_conents">
+                        <div class="swiper-wrapper contents">
+                            <div class="swiper-slide banner1 active"><a href="#"><img src="./images/noimg_1.jpg" alt=""></a></div>
+                            <div class="swiper-slide banner2"><a href="#"><img src="./images/noimg_2.jpg" alt=""></a></div>
+                            <div class="swiper-slide banner3"><a href="#"><img src="./images/noimg_3.jpg" alt=""></a></div>
+                            <div class="swiper-slide banner4"><a href="#"><img src="./images/noimg_4.jpg" alt=""></a></div>
+                            <div class="swiper-slide banner5"><a href="#"><img src="./images/noimg_5.jpg" alt=""></a></div>
+                            <div class="swiper-slide banner6"><a href="#"><img src="./images/noimg_5.jpg" alt=""></a></div>
+                            <!-- .swiper-pagination-bullet -->
+                        </div>
+                        
                     </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <!-- javascript - plugin -->
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"><img src="./images/swiper_arrow_prev.png" alt=""></div>
+                    <div class="swiper-button-next"><img src="./images/swiper_arrow_next.png" alt=""></div>
+                    <!-- <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div> -->
+                    <!-- javascript - plugin -->
+                </div><!-- container_btm -->
             </div>
         </div>
         <!-- e:banner -->
@@ -114,7 +151,7 @@
         <div id="redesign">
             <div class="container">
                 <h1>WEB PROJECT</h1>
-                <div class="swiper-container">
+                <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide slide1">
                             <h2>RE-DESIGN <span>.01 북극곰 랜딩페이지</span></h2>
@@ -164,22 +201,24 @@
                             </div>
                         </div><!-- e: slide1 -->
 
-                        <!-- <div class="swiper-slide slide2">slide2</div>
-                        <div class="swiper-slide slide3">slide3</div> -->
-                        
+                        <!-- <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div> -->
+
                     </div> <!-- swiper-wrapper -->
                 </div><!-- eeee: swiper-container -->
+                
             </div><!-- eeee:container -->
         </div>
         <div id="footer">
             <div class="container">
                 <h1>Thank you for watching<br>my portfolio.</h1>
                 <p>Copyright &copy; 2023.All rights reserved.<br>본 사이트는 상업적 목적이 아닌 김도연 개인포트폴리오 사이트로 제작되었습니다.</p>
-                <div class="arrow">
+                <div class="arrow" title="intro로 올라갑니다.">
                     <img src="./images/footer_arrow.png" alt="">
                 </div>
             </div>
         </div>
     </div>
+    <script src="./script/main.js"></script>
 </body>
 </html>
