@@ -15,3 +15,10 @@
   #banner .swiper-pagination 을 디자인함 <br>
   <strong>그런데!</strong> 왜 .swiper-pagination-bullet에서 width,height opacity:1; 을 왜 주어야하는 지 모르겠음
 </p>
+
+***
+
+<h4>2023.04.29 - PM 17:07</h4>
+<p>#redesign .swiper (+ scrollbar, .swiper-button-next(-prev))</p>
+<p>#detail design 마우스 hover시에 click 버튼 생기도록 제작</p>
+<p>#banner design .slide에 transition:all 0.3s 생성</p>
