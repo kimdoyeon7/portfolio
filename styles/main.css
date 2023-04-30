@@ -166,40 +166,40 @@
 .wrap #info .container .contents .skillTool ul li img {
   width: 100%;
 }
-.wrap #banner .container {
+.wrap #sns .container {
   width: 1600px;
   height: 100vh;
   margin: 0 auto;
   background-color: lightcyan;
 }
-.wrap #banner .container h1 {
+.wrap #sns .container h1 {
   font-size: 3rem;
   font-family: "inter", sans-serif;
   font-weight: 800;
   padding: 100px 0;
 }
-.wrap #banner .container .container_btm {
+.wrap #sns .container .container_btm {
   position: relative;
 }
-.wrap #banner .container .container_btm .wrap {
+.wrap #sns .container .container_btm .wrap {
   margin: 0 auto;
   overflow: hidden;
   padding: 50px 0;
   width: 1400px;
   transition: all 0.3s;
 }
-.wrap #banner .container .container_btm .wrap .all_contents {
+.wrap #sns .container .container_btm .wrap .all_contents {
   background: linear-gradient(to left, rgb(255, 237, 188), rgb(237, 66, 100), rgb(255, 237, 188));
   overflow: visible !important;
 }
-.wrap #banner .container .container_btm .wrap .all_contents .contents {
+.wrap #sns .container .container_btm .wrap .all_contents .contents {
   position: relative;
   width: 10%;
   height: 100%;
   z-index: 1;
   display: flex;
 }
-.wrap #banner .container .container_btm .wrap .all_contents .contents .swiper-slide {
+.wrap #sns .container .container_btm .wrap .all_contents .contents .swiper-slide {
   display: flex;
   flex-flow: row wrap;
   align-content: center;
@@ -207,34 +207,34 @@
   width: 320px;
   transition: transform 0.5s;
 }
-.wrap #banner .container .container_btm .wrap .all_contents .contents .swiper-slide a img {
+.wrap #sns .container .container_btm .wrap .all_contents .contents .swiper-slide a img {
   width: 100%;
 }
-.wrap #banner .container .container_btm .wrap .all_contents .contents .active {
+.wrap #sns .container .container_btm .wrap .all_contents .contents .active {
   transform: scale(1.2) !important;
 }
-.wrap #banner .container .container_btm .swiper-pagination {
+.wrap #sns .container .container_btm .swiper-pagination {
   display: flex;
   justify-content: center;
   align-items: center;
   bottom: -70px;
 }
-.wrap #banner .container .container_btm .swiper-pagination-bullet {
+.wrap #sns .container .container_btm .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   background: transparent;
   border: 1px solid #FFD4D4;
   opacity: 1;
 }
-.wrap #banner .container .container_btm .swiper-pagination-bullet-active {
+.wrap #sns .container .container_btm .swiper-pagination-bullet-active {
   width: 50px;
   height: 15px;
   border-radius: 10px;
   background: #FFD4D4;
   border: 1px solid transparent;
 }
-.wrap #banner .container .container_btm .swiper-button-next:after,
-.wrap #banner .container .container_btm .swiper-button-prev:after {
+.wrap #sns .container .container_btm .swiper-button-next:after,
+.wrap #sns .container .container_btm .swiper-button-prev:after {
   display: none;
 }
 .wrap #detail .container {

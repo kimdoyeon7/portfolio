@@ -1,7 +1,7 @@
 // banner -> Slides per view
 // const all_contents = document.querySelector('#banner .all_contents')
 
-const banner_swiper = new Swiper("#banner .swiper", {
+const sns_swiper = new Swiper("#sns .swiper", {
     slidesPerView:3, // 한번에 보이는 slide 갯수
     spaceBetween:60, // slide 사이간격 
     mousewheel:true,
@@ -23,7 +23,7 @@ const banner_swiper = new Swiper("#banner .swiper", {
     },
     // effect: 'coverflow', 
     pagination: { // 밑에 이미지 갯수 표시 
-        el: "#banner .swiper-pagination",
+        el: "#sns .swiper-pagination",
         // clickable: true,
     },
     navigation: {//다음이전버튼
