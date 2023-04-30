@@ -22,3 +22,7 @@
 <p>#redesign .swiper (+ scrollbar, .swiper-button-next(-prev))</p>
 <p>#detail design 마우스 hover시에 click 버튼 생기도록 제작</p>
 <p>#banner design .slide에 transition:all 0.3s 생성</p>
+
+***
+<h4>2023.04.30</h4>
+<p>sns 디자인 카드 1개 제작</p>
