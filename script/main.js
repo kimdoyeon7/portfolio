@@ -1,12 +1,34 @@
-// banner -> Slides per view
-// const all_contents = document.querySelector('#banner .all_contents')
+// sns -> Slides per view
+const big_sns = document.querySelector('#project_view')
+const swiper_sns = document.querySelectorAll('#sns .all_contents .swiper-slide')
+let imgC = document.createElement('img')
+big_sns.style.display = 'none'
 
-const sns_swiper = new Swiper("#sns .swiper", {
+swiper_sns.forEach((t,i)=>{
+    t.addEventListener('click',(e)=>{
+        e.preventDefault()
+        console.log('----------')
+        console.log(i)
+        imgC.src = `./images/index/sns_design_${i+1}.jpg`
+        big_sns.style.display = 'block'
+        big_sns.children[0].appendChild(imgC)
+        /* big_sns.innerHTML = i+1
+        big_sns.style.display = 'block' */
+    })
+})
+
+big_sns.addEventListener('click',()=>{
+    big_sns.style.display = 'none'
+})
+
+
+const swiper = new Swiper('#sns .all_contents', {
+    direction: 'horizontal',
+    loop:true,
     slidesPerView:3, // 한번에 보이는 slide 갯수
     spaceBetween:60, // slide 사이간격 
+    centeredSlides: true, //1번 이미지가 가운데 오도록 // 중심슬라이드 인식
     mousewheel:true,
-    loop:true,
-    centeredSlides: true, //1번 이미지가 가운데 오도록
     on: {
         slideChange: function () { // swiper 공식 | 현재 활성 슬라이드가 변경되면 이벤트가 시작
             const activeIndex = this.activeIndex; // 변수 activeIndex 는 여기서 activeIndex는 활성화된 .activeIndex를 의미함.
@@ -33,30 +55,9 @@ const sns_swiper = new Swiper("#sns .swiper", {
 });
 
 //----------------------------------------------------------------
-// swiper-slide > img 누르면 배너디자인 크게 뜨게
-/* const view = document.querySelector('#project_view')
-// const banner_img = document.querySelectorAll('#banner > .banner_img > a ')
-const banner_img = document.querySelectorAll('#banner .contents > .banner_img')
-let imgC = document.createElement('img')
-console.log(view, banner_img, imgC)
+// swiper-slide > img 누르면 sns디자인 크게 뜨게
 
-view.style.display = 'none'
 
-banner_img.forEach((t,i)=>{
-    console.log('----------------')
-    console.log(t,i)
-    t.addEventListener('click',(e)=>{
-        e.preventDefault() //a의 href 기능 막기
-        // console.log(t,i)
-        // imgC.src = `./images/banner_${i+1}.jpg`
-        // console.log(imgC)
-        // view.style.display = 'block'
-        // view.children[0].appendChild(imgC)
-    })
-}) */
-// detail design
-// const click_btn = document.querySelector('#detail .contents span')
-// console.log('click_btn')
 
 // ----------------------------------------------------------------------------
 // redesign_swiper 
@@ -74,3 +75,42 @@ const redesign_swiper = new Swiper('#redesign .swiper',{
     },
 })
 
+
+
+
+
+
+
+
+// --------------------------------------- // 
+// #footer 에서 화살표 누르면 맨 위로 부드럽게 올라가기
+
+const f_arrow = document.querySelector('#footer .arrow')
+// console.log(f_arrow)
+
+f_arrow.addEventListener('click',(e)=>{
+    e.preventDefault(),
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth' // 부드럽게 올라가기
+    });
+})
+
+
+// --------------------------------------- // 
+// #intro 에서 화살표 누르면 맨 위로 부드럽게 내려가기
+
+const i_arrow = document.querySelector('#intro .arrow_down')
+const info = document.querySelector('#info')
+// console.log(i_arrow)
+
+i_arrow.addEventListener('click',(e)=>{
+    e.preventDefault(),
+    window.scrollTo({
+        top:info.offsetTop,
+        behavior:'smooth'
+    })
+    // behavior: 'smooth'
+
+})

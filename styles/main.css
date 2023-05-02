@@ -31,8 +31,33 @@
     transform: scale(1);
   }
 }
+.nav {
+  display: none;
+}
+
 .wrap {
   overflow-x: hidden;
+}
+.wrap #project_view {
+  position: fixed;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding-top: 80px;
+  cursor: pointer;
+}
+.wrap #project_view .contents {
+  width: 800px;
+  margin: 0 auto;
+  height: 100vh;
+  overflow-y: auto;
+}
+.wrap #project_view .contents img {
+  width: 100%;
 }
 .wrap #intro {
   margin: 0px auto;
