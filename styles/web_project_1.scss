@@ -1,0 +1,147 @@
+$color1:#259546;
+$color2:#ff6d00;
+$color3:#eb0f29;
+$color4:#c8c8c8;
+$color5:#969696;
+$colorB:#000;
+$colorW:#fff;
+
+@mixin layout {width:75%; margin:0 auto;}
+@mixin font1{font-family: 'KBO-Dia-Gothic-medium'; font-weight:500;}
+@mixin titleH1 {font-family: 'KBO-Dia-Gothic-bold'; font-weight:700; font-size:2rem;}
+// @mixin titleP {font-family: 'KBO-Dia-Gothic-light'; font-weight:300;}
+
+
+header {
+    background-color: #ff0;
+    .container {
+        background-color: #c8c8c8;
+        @include layout();
+        display:flex; justify-content: space-between; align-items: center;
+        * {@include font1;}
+    h1 {
+        background-color: lightblue;
+        a { img{width:100%;}}
+    }
+    nav {
+        background-color: lightpink;
+        ul {
+            display: flex;
+            > li {
+                > a {background-color: #ff6d00; padding:10px 20px; margin:0 10px;}
+                .sub{display:none;}
+            }
+        }
+    }
+    .search {
+        background-color:$colorW;
+        display: flex; align-items: center;
+        border-radius: 50px;
+        padding: 0 10px;
+        input{
+            border:none; outline:none;
+            width:220px; height:30px;
+            font-size:0.875rem;
+        }
+        // input::-webkit-search-decoration { }
+        // input[type="search"]:focus { border: solid 2px #D2691E; }
+        button {
+            // background-color: lime;
+            width:18px;
+            border:none;
+            img {width:100%;}
+        }
+        
+    }
+    }
+}
+#banner {
+    background: lightcyan;
+    .bnr_wrap {
+        background-color: #259546;
+        @include layout();
+        height:600px; // 임시값
+    }
+}
+#shopping {
+    background-color: palegoldenrod;
+    .container {
+        background-color: #c8c8c8;
+        @include layout();
+        padding:50px 70px;
+        .title {
+            h1 {@include titleH1; margin-bottom:15px;}
+            p {font-weight:500;}
+        }
+        .contents {
+            .tab {
+                display:flex; justify-content:center;
+                border-bottom:2px solid #000;
+                h2 {
+                    background-color: lime; 
+                    text-align: center;
+                    padding:20px 0; 
+                    margin:50px 40px 0;
+                    width:120px;
+                }
+            }
+            .product {
+                .goods {
+                    display:flex;
+                    margin-top:30px;
+                    a {
+                        margin-right:20px;
+                        justify-content: space-between;
+                        img {width:100%;}
+                    }
+                    a:last-child{margin-right:0;}
+                }
+                // .goods1 {display: none;}
+                .goods2,.goods3,.goods4, {display:none;}
+            }
+        }
+    }
+}
+#month_event {
+    background-color: #c8c8c8;
+    .container {
+        background-color: lightgreen;
+        @include layout();
+        padding:50px 70px;
+        text-align: center;
+        .title {
+            > * {text-align:left;}
+            h1 {@include titleH1; margin-bottom:15px;}
+            p {font-weight:500;}
+        }
+        video {
+            background-color: #eb0f29;
+            width:80%; 
+            margin:0 auto;
+            border-radius:50px;
+            border:5px solid $colorW;
+            // position:relative; top:0; left:10%;
+            margin-top:50px;
+        }
+    }
+}
+footer {
+    background-color: lightsalmon;
+    .container {
+        @include layout();
+        display:flex; flex-flow:column wrap;
+        .f_top{
+            display: flex; justify-content: space-between;
+            .top_right{
+                display:flex; justify-content: space-between;
+                background-color: lightcoral;
+                width:600px;
+                dl {
+                    dt{font-weight:600; font-size: 1.2rem;}
+                    dd{}
+                }
+            }
+        }
+        .f_btm {}
+    }
+}
