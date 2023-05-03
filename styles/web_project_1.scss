@@ -132,16 +132,51 @@ footer {
         display:flex; flex-flow:column wrap;
         .f_top{
             display: flex; justify-content: space-between;
+            background-color: lightblue;
+            margin-top:40px;
             .top_right{
                 display:flex; justify-content: space-between;
                 background-color: lightcoral;
-                width:600px;
+                width:700px;
                 dl {
-                    dt{font-weight:600; font-size: 1.2rem;}
-                    dd{}
+                    dt{font-weight:600; font-size: 1.2rem; margin-bottom:15px;}
+                    dd{margin:10px 0;}
+                }
+                form {
+                    fieldset {
+                        background-color: pink;
+                        text-align: center;
+                        legend {}
+                        #site {
+                            background-color: rgba(0,0,0,0.5); color:$colorW;
+                            border:2px solid red;
+                            width:200px;
+                            padding:7px 0;
+                            border:none; outline:none;
+                            option {}
+                        }
+                        button {
+                            background-color: $colorW; border:1px solid $colorB; border-radius:100px;
+                            padding:10px;
+                            text-align: center;
+                        }
+                    }
                 }
             }
         }
-        .f_btm {}
+        .f_btm {
+            display: flex; justify-content: space-between; 
+            background-color:red;
+            margin-top:150px;
+            .btm_left {
+                ul {display:flex;
+                    li {
+                        a {}
+                        a:first-child {margin-right:10px;}
+                    }
+                }
+                // p {margin-top:10px;}
+            }
+        }
     }
 }

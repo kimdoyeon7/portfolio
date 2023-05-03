@@ -156,14 +156,52 @@ footer .container {
 footer .container .f_top {
   display: flex;
   justify-content: space-between;
+  background-color: lightblue;
+  margin-top: 40px;
 }
 footer .container .f_top .top_right {
   display: flex;
   justify-content: space-between;
   background-color: lightcoral;
-  width: 600px;
+  width: 700px;
 }
 footer .container .f_top .top_right dl dt {
   font-weight: 600;
   font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+footer .container .f_top .top_right dl dd {
+  margin: 10px 0;
+}
+footer .container .f_top .top_right form fieldset {
+  background-color: pink;
+  text-align: center;
+}
+footer .container .f_top .top_right form fieldset #site {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: 2px solid red;
+  width: 200px;
+  padding: 7px 0;
+  border: none;
+  outline: none;
+}
+footer .container .f_top .top_right form fieldset button {
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 100px;
+  padding: 10px;
+  text-align: center;
+}
+footer .container .f_btm {
+  display: flex;
+  justify-content: space-between;
+  background-color: red;
+  margin-top: 150px;
+}
+footer .container .f_btm .btm_left ul {
+  display: flex;
+}
+footer .container .f_btm .btm_left ul li a:first-child {
+  margin-right: 10px;
 }/*# sourceMappingURL=web_project_1.css.map */
