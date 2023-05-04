@@ -1,0 +1,14 @@
+/* tablet widht:1024*/
+@media screen and (max-width:1024px) {
+	/* tablet  CSS */
+    header nav > ul {
+        /* display:none; */
+    }
+
+    /* main .visual .wrap_container video {
+        height:150%;
+    }
+    main .wrap3 .wrap_container .creator a:last-child {
+        display:none;
+    } */
+}

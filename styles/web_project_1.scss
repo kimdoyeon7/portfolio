@@ -18,41 +18,84 @@ header {
         background-color: #c8c8c8;
         @include layout();
         display:flex; justify-content: space-between; align-items: center;
-        * {@include font1;}
-    h1 {
-        background-color: lightblue;
-        a { img{width:100%;}}
-    }
-    nav {
-        background-color: lightpink;
-        ul {
-            display: flex;
-            > li {
-                > a {background-color: #ff6d00; padding:10px 20px; margin:0 10px;}
-                .sub{display:none;}
+        position:relative; z-index:999;
+        * {}
+        h1 {
+            background-color: lightblue; 
+            a { img{width:100%;}}
+        }
+        > nav {
+            background-color: lightpink;
+            display: none;
+            > ul {
+                display: flex; line-height:20px;
+                justify-content: space-between;
+                > li {
+                    display:flex; flex-flow: column nowrap;
+                    background-color:lightsalmon;
+                    position:relative;
+                    > a {
+                        background-color:#ff6d00; 
+                        @include font1;
+                        line-height:50px;
+                        margin-right:20px; text-align: left;
+                        display:block; 
+                        width:150px;
+                    }
+                    // > a:hover .sub > li > a {color:$color1;}
+                    .sub{
+                        background-color: wheat;
+                        position:absolute; left:0; top:50px;
+                        width:150px;
+                        > li {
+                            > a {
+                                font-weight:500;
+                                line-height:3;
+                            }
+                            > a:hover {color:$color1;}
+                        }
+                    }
+                }
             }
         }
-    }
-    .search {
-        background-color:$colorW;
-        display: flex; align-items: center;
-        border-radius: 50px;
-        padding: 0 10px;
-        input{
-            border:none; outline:none;
-            width:220px; height:30px;
-            font-size:0.875rem;
+        .menu {
+            background-color: lightblue;
+            display:flex; flex-flow: column wrap;
+            > .ham {
+                display: block;
+                background-color: #259546;
+                span {
+                    display:block;
+                    background-color: $colorB;
+                    border-radius: 10px;
+                }
+            }
+            // > nav {display:none;}
         }
-        // input::-webkit-search-decoration { }
-        // input[type="search"]:focus { border: solid 2px #D2691E; }
-        button {
-            // background-color: lime;
-            width:18px;
-            border:none;
-            img {width:100%;}
+        .search {
+            background-color:$colorW;
+            display: flex; align-items: center;
+            border-radius: 50px;
+            padding: 0 10px;
+            input{
+                border:none; outline:none;
+                width:220px; height:30px;
+                font-size:0.875rem;
+            }
+            button {
+                // background-color: lime;
+                width:18px;
+                border:none;
+                img {width:100%;}
+            }
+            
         }
-        
     }
+    .containerBg {
+        background-color: $colorW; 
+        width:100%; height:350px;
+        position:absolute; left:0; top:0; z-index:888;
+        display:none;
     }
 }
 #banner {
@@ -61,6 +104,20 @@ header {
         background-color: #259546;
         @include layout();
         height:600px; // 임시값
+        a:first-child {
+            display: block;
+            background-image: url(../images/web_project_1/bnr1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width:100%; height:100%;
+        }
+        a:last-child {
+            display: block;
+            background-image: url(../images/web_project_1/bnr1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width:100%; height:100%;
+        }
     }
 }
 #shopping {
@@ -106,6 +163,11 @@ header {
     background-color: #c8c8c8;
     .container {
         background-color: lightgreen;
+        // background-image: url(../images/web_project_1/month_event_bg.jpg);
+        background-image: url(../images/web_project_1/month_event_bg.jpg);
+        background-repeat: no-repeat;
+        background-size:cover;
+        // opacity:0.5; position:relative; z-index: 888;
         @include layout();
         padding:50px 70px;
         text-align: center;
@@ -123,6 +185,69 @@ header {
             // position:relative; top:0; left:10%;
             margin-top:50px;
         }
+        .card {
+            display:flex; justify-content: center;
+            background-color: lightblue;
+            p {
+                background-color: lightgoldenrodyellow;
+                width:13%;
+                margin:50px 20px;
+                img {width:100%;}
+            }
+        }
+        h2 {
+            background-color: pink;
+            @include titleH1;
+            span {font-family: 'KBO-Dia-Gothic-bold'; font-weight:700; font-size:4rem; vertical-align:middle; margin:0 10px;}
+            span:first-child {color:$color3;}
+            span:last-child {color:$color1;}
+        }
+    }
+}
+#info_more {
+    background-color: lightseagreen;
+    .container {
+        @include layout();
+        display:flex;
+        background-color: lightblue;
+        // margin:50px auto;
+        padding:50px 0;
+        > * {
+            margin:0 auto; 
+            width:40%; 
+            height:100%;
+            background-color: lightcyan;
+            /* > p{
+                margin-bottom:10px;
+                img{width:100%; height:200px;}
+            } */
+            > .info_bg {
+                // height:700px; 
+                width:100%; height:180px;
+                background-image:url(../images/web_project_1/info_more_bg1.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                // border:2px solid #000;
+                border-radius:30px;
+            }
+            > .btm_title {
+                // margin-top:150px;
+                display: flex; justify-content: space-between;
+                .title_l {
+                    background-color: palegoldenrod;
+                    h1 {
+                        font-size:1.4rem; margin-bottom:10px;
+                        span{font-weight:700; font-size:1.4rem;}
+                    }
+                }
+                a {background-color:$color5; padding:15px 30px; border-radius: 50px; font-size:1.2rem; font-weight:700;}
+            }
+        }
+        // .info_left {
+        //     // background-color: pink; 
+        //     // height:700px; 
+        //     // width:50%;
+        // }
     }
 }
 footer {
@@ -169,6 +294,7 @@ footer {
             background-color:red;
             margin-top:150px;
             .btm_left {
+                display:flex; flex-flow:column wrap; justify-content: space-around;
                 ul {display:flex;
                     li {
                         a {}
@@ -176,6 +302,9 @@ footer {
                     }
                 }
                 // p {margin-top:10px;}
+            }
+            .btm_right {
+                address {line-height:1.5;}
             }
         }
     }

@@ -8,10 +8,8 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-header .container * {
-  font-family: "KBO-Dia-Gothic-medium";
-  font-weight: 500;
+  position: relative;
+  z-index: 999;
 }
 header .container h1 {
   background-color: lightblue;
@@ -19,19 +17,58 @@ header .container h1 {
 header .container h1 a img {
   width: 100%;
 }
-header .container nav {
+header .container > nav {
   background-color: lightpink;
-}
-header .container nav ul {
-  display: flex;
-}
-header .container nav ul > li > a {
-  background-color: #ff6d00;
-  padding: 10px 20px;
-  margin: 0 10px;
-}
-header .container nav ul > li .sub {
   display: none;
+}
+header .container > nav > ul {
+  display: flex;
+  line-height: 20px;
+  justify-content: space-between;
+}
+header .container > nav > ul > li {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: lightsalmon;
+  position: relative;
+}
+header .container > nav > ul > li > a {
+  background-color: #ff6d00;
+  font-family: "KBO-Dia-Gothic-medium";
+  font-weight: 500;
+  line-height: 50px;
+  margin-right: 20px;
+  text-align: left;
+  display: block;
+  width: 150px;
+}
+header .container > nav > ul > li .sub {
+  background-color: wheat;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 150px;
+}
+header .container > nav > ul > li .sub > li > a {
+  font-weight: 500;
+  line-height: 3;
+}
+header .container > nav > ul > li .sub > li > a:hover {
+  color: #259546;
+}
+header .container .menu {
+  background-color: lightblue;
+  display: flex;
+  flex-flow: column wrap;
+}
+header .container .menu > .ham {
+  display: block;
+  background-color: #259546;
+}
+header .container .menu > .ham span {
+  display: block;
+  background-color: #000;
+  border-radius: 10px;
 }
 header .container .search {
   background-color: #fff;
@@ -54,6 +91,16 @@ header .container .search button {
 header .container .search button img {
   width: 100%;
 }
+header .containerBg {
+  background-color: #fff;
+  width: 100%;
+  height: 350px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 888;
+  display: none;
+}
 
 #banner {
   background: lightcyan;
@@ -63,6 +110,22 @@ header .container .search button img {
   width: 75%;
   margin: 0 auto;
   height: 600px;
+}
+#banner .bnr_wrap a:first-child {
+  display: block;
+  background-image: url(../images/web_project_1/bnr1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+#banner .bnr_wrap a:last-child {
+  display: block;
+  background-image: url(../images/web_project_1/bnr1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
 }
 
 #shopping {
@@ -118,6 +181,9 @@ header .container .search button img {
 }
 #month_event .container {
   background-color: lightgreen;
+  background-image: url(../images/web_project_1/month_event_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 75%;
   margin: 0 auto;
   padding: 50px 70px;
@@ -142,6 +208,89 @@ header .container .search button img {
   border-radius: 50px;
   border: 5px solid #fff;
   margin-top: 50px;
+}
+#month_event .container .card {
+  display: flex;
+  justify-content: center;
+  background-color: lightblue;
+}
+#month_event .container .card p {
+  background-color: lightgoldenrodyellow;
+  width: 13%;
+  margin: 50px 20px;
+}
+#month_event .container .card p img {
+  width: 100%;
+}
+#month_event .container h2 {
+  background-color: pink;
+  font-family: "KBO-Dia-Gothic-bold";
+  font-weight: 700;
+  font-size: 2rem;
+}
+#month_event .container h2 span {
+  font-family: "KBO-Dia-Gothic-bold";
+  font-weight: 700;
+  font-size: 4rem;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+#month_event .container h2 span:first-child {
+  color: #eb0f29;
+}
+#month_event .container h2 span:last-child {
+  color: #259546;
+}
+
+#info_more {
+  background-color: lightseagreen;
+}
+#info_more .container {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  background-color: lightblue;
+  padding: 50px 0;
+}
+#info_more .container > * {
+  margin: 0 auto;
+  width: 40%;
+  height: 100%;
+  background-color: lightcyan;
+  /* > p{
+      margin-bottom:10px;
+      img{width:100%; height:200px;}
+  } */
+}
+#info_more .container > * > .info_bg {
+  width: 100%;
+  height: 180px;
+  background-image: url(../images/web_project_1/info_more_bg1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+}
+#info_more .container > * > .btm_title {
+  display: flex;
+  justify-content: space-between;
+}
+#info_more .container > * > .btm_title .title_l {
+  background-color: palegoldenrod;
+}
+#info_more .container > * > .btm_title .title_l h1 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+#info_more .container > * > .btm_title .title_l h1 span {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+#info_more .container > * > .btm_title a {
+  background-color: #969696;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 footer {
@@ -199,9 +348,17 @@ footer .container .f_btm {
   background-color: red;
   margin-top: 150px;
 }
+footer .container .f_btm .btm_left {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
 footer .container .f_btm .btm_left ul {
   display: flex;
 }
 footer .container .f_btm .btm_left ul li a:first-child {
   margin-right: 10px;
+}
+footer .container .f_btm .btm_right address {
+  line-height: 1.5;
 }/*# sourceMappingURL=web_project_1.css.map */
