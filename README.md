@@ -39,3 +39,10 @@
 <p>web_project_1 -> html 완</p>
 <p>web_project_1(세븐일레븐) -> 스타일가이드완(피그마)</p>
 <p>web_project_1(세븐일레븐) -> nav의 sub영역 </p>
+
+***
+<h4>2023.05.05 - PM 17:49</h4>
+<p>index.html -> swiper -> 이미지 누르면 확대기능 추가</p>
+<p>web_project_1 -> html 완</p>
+<p>web_project_1(세븐일레븐) -> 스타일가이드완(피그마)</p>
+<p>web_project_1(세븐일레븐) -> nav의 sub영역 </p>
