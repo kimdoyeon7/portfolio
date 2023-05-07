@@ -3,6 +3,7 @@ $color2:#ff6d00;
 $color3:#eb0f29;
 $color4:#c8c8c8;
 $color5:#969696;
+$color6:#f5f5f5;
 $colorB:#000;
 $colorW:#fff;
 
@@ -21,12 +22,11 @@ header {
         position:relative; z-index:999;
         * {}
         h1 {
-            background-color: lightblue; 
+            // background-color: lightblue; 
             a { img{width:100%;}}
         }
-        > .main_nav {
-            background-color: lightpink;
-            display: none;
+        .main_nav {
+            // background-color: lightpink;
             > ul {
                 display: flex; line-height:20px;
                 justify-content: space-between;
@@ -38,11 +38,10 @@ header {
                         background-color:#ff6d00; 
                         @include font1;
                         line-height:50px;
-                        margin-right:20px; text-align: left;
+                        margin-right:20px; text-align: center;
                         display:block; 
                         width:150px;
                     }
-                    // > a:hover .sub > li > a {color:$color1;}
                     .sub{
                         background-color: wheat;
                         position:absolute; left:0; top:50px;
@@ -76,6 +75,7 @@ header {
         }
         .re_nav {
             background-color: pink; z-index: 999;
+            display: none;
             > ul {
                 display:flex; 
                 justify-content: space-between;
@@ -109,6 +109,7 @@ header {
             background-color: $colorW;
             width:100%; height:350px;
             position:absolute; left:0; top:100%; z-index:888;
+            display:none;
         }
         .search {
             background-color:$colorW;
@@ -171,8 +172,9 @@ header {
         .contents {
             .tab {
                 display:flex; justify-content:center;
-                border-bottom:2px solid #000;
                 width:100%;
+                position: relative;
+                z-index: 999;
                 h2 {
                     background-color: lime; 
                     text-align: center;
@@ -180,33 +182,47 @@ header {
                     margin:50px 40px 0;
                     width:23%;
                 }
+                .active {
+                    border-bottom:3px solid $color3;
+                }
             }
             .product {
+                overflow: hidden;
+                // position:relative;
                 .goods {
                     display:flex;
                     margin-top:30px;
+                    // position: absolute; transform: translate(-50%, -50%);
                     a {
                         margin-right:20px;
                         justify-content: space-between;
+                        transition:all 0.3s;
                         img {width:100%;}
                     }
                     a:last-child{margin-right:0;}
+                    a:hover {
+                        border:4px solid $color3; 
+                        // img {margin:5px;}
+                    }
                 }
                 // .goods1 {display: none;}
                 .goods2,.goods3,.goods4 {display:none;}
             }
         }
+        .contents::before{
+            content:''; width:100%; height:1px;
+            background-color: #000; display:inline-block;
+            position: relative; top:109px; z-index:888;
+        }
     }
 }
 #month_event {
-    background-color: #c8c8c8;
-    .container {
-        background-color: lightgreen;
-        // background-image: url(../images/web_project_1/month_event_bg.jpg);
-        background-image: url(../images/web_project_1/month_event_bg.jpg);
+    // background-color: #c8c8c8;
+    background-image: url(../images/web_project_1/month_event_bg.jpg);
         background-repeat: no-repeat;
         background-size:cover;
-        // opacity:0.5; position:relative; z-index: 888;
+    .container {
+        // background-color: lightgreen;
         @include layout();
         padding:50px 70px;
         text-align: center;
@@ -216,7 +232,7 @@ header {
             p {font-weight:500;}
         }
         video {
-            background-color: #eb0f29;
+            // background-color: #eb0f29;
             width:80%; 
             margin:0 auto;
             border-radius:50px;
@@ -226,16 +242,16 @@ header {
         }
         .card {
             display:flex; justify-content: center;
-            background-color: lightblue;
+            // background-color: lightblue;
             p {
-                background-color: lightgoldenrodyellow;
+                // background-color: lightgoldenrodyellow;
                 width:13%;
                 margin:50px 20px;
                 img {width:100%;}
             }
         }
         h2 {
-            background-color: pink;
+            // background-color: pink;
             @include titleH1;
             span {font-family: 'KBO-Dia-Gothic-bold'; font-weight:700; font-size:4rem; vertical-align:middle; margin:0 10px;}
             span:first-child {color:$color3;}
@@ -244,64 +260,55 @@ header {
     }
 }
 #info_more {
-    background-color: lightseagreen;
+    // background-color: lightseagreen;
     .container {
         @include layout();
         display:flex;
-        background-color: lightblue;
-        // margin:50px auto;
+        // background-color: lightblue;
         padding:50px 0;
         > * {
             margin:0 auto; 
             width:40%; 
             height:100%;
-            background-color: lightcyan;
-            /* > p{
-                margin-bottom:10px;
-                img{width:100%; height:200px;}
-            } */
+            // background-color: lightcyan;
             > .info_bg {
                 // height:700px; 
                 width:100%; height:180px;
                 background-image:url(../images/web_project_1/info_more_bg1.jpg);
                 background-size: cover;
                 background-repeat: no-repeat;
-                // border:2px solid #000;
                 border-radius:30px;
             }
             > .btm_title {
-                // margin-top:150px;
                 display: flex; justify-content: space-between;
+                margin-top:10px;
                 .title_l {
-                    background-color: palegoldenrod;
+                    // background-color: palegoldenrod;
                     h1 {
                         font-size:1.4rem; margin-bottom:10px;
                         span{font-weight:700; font-size:1.4rem;}
                     }
                 }
-                a {background-color:$color5; padding:15px 30px; border-radius: 50px; font-size:1.2rem; font-weight:700;}
+                a { border:1px solid $colorB; border-radius: 50px; padding:15px 30px; border-radius: 50px; font-size:1.2rem; font-weight:700;}
+                a:hover {background-color:$color1; color:$colorW; border:none;}
             }
         }
-        // .info_left {
-        //     // background-color: pink; 
-        //     // height:700px; 
-        //     // width:50%;
-        // }
     }
 }
 footer {
-    background-color: lightsalmon;
+    background-color:$color6;
+    border-top:1px solid $colorB;
     .container {
         @include layout();
         display:flex; flex-flow:column wrap;
         .f_top{
             display: flex; justify-content: space-between;
-            background-color: lightblue;
+            // background-color: lightblue;
             margin-top:40px;
             h1{img{width:100%;}}
             .top_right{
                 display:flex; justify-content: space-between;
-                background-color: lightcoral;
+                // background-color: lightcoral;
                 width:50%;
                 dl {
                     dt{font-weight:600; font-size: 1.2rem; margin-bottom:15px;}
@@ -309,7 +316,7 @@ footer {
                 }
                 form {
                     fieldset {
-                        background-color: pink;
+                        // background-color: pink;
                         text-align: center;
                         legend {}
                         #site {
@@ -331,7 +338,7 @@ footer {
         }
         .f_btm {
             display: flex; justify-content: space-between; 
-            background-color:red;
+            // background-color:red;
             margin-top:10%;
             // margin-top:150px;
             .btm_left {
