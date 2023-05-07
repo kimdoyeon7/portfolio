@@ -1,14 +1,117 @@
 /* tablet widht:1024*/
 @media screen and (max-width:1024px) {
 	/* tablet  CSS */
-    header nav > ul {
-        /* display:none; */
+    header .main_nav {
+        display:none;
+    }
+    header .re_nav {
+        position:absolute;
+        top:100%;
+        left:4%;
+    }
+    header .container .menu {
+        display: block;
+        position: absolute;
+        right: 200px;
+    }
+    header .container .search input {
+        border: none;
+        outline: none;
+        width: 156px;
+        height: 30px;
+        font-size: 0.875rem;
     }
 
-    /* main .visual .wrap_container video {
-        height:150%;
+
+    /* 이달의 쇼핑찬스 */
+
+    #shopping .container {padding:0;}
+    #shopping .container .title {padding:50px 70px 25px;}
+    #shopping .container .contents {padding-bottom:30px;}
+    #shopping .container .contents .product .goods a {margin-right:15px;}
+    #shopping .container .contents .product .goods a:nth-child(3) {margin:0;}
+    #shopping .container .contents .product .goods a:last-child {display:none;}
+    
+    /* 5월 행사 */
+    #month_event .container {padding:0;}
+    #month_event .container .title {padding:50px 70px;}
+    #month_event .container video {
+        /* display: none;*/
+        border:none; border-radius:0;
+        width:100%;
     }
-    main .wrap3 .wrap_container .creator a:last-child {
-        display:none;
-    } */
+    /* 카드사아이콘 */
+    #month_event .container .card p {
+        width:100%; margin:30px 10px;
+    }
+
+    /* 더 많은 정보 */
+    #info_more .container > * {
+        width:70%;
+    }
+    #info_more .container .info_right {display: none;}
+
+    /* footer */
+    footer .container  {}
+    footer .container .f_top {}
+    footer .container .f_top .top_right {width:75%;}
+    footer .container .f_btm {}
+    footer .container .f_btm .btm_right {display: none;}
+}
+
+
+/* mobile widht:430*/
+@media screen and (max-width:430px){
+    header .re_nav {display: none;}
+    header .re_nav_bg {display: none;}
+    header .container .search {display: none;}
+    header .container .menu {right:0;}
+
+    /* 이달의 쇼핑찬스 */
+    #shopping .container {padding:0;}
+    #shopping .container .title {padding:15px 0;}
+    #shopping .container .title h1 {font-family:'KBO-Dia-Gothic-bold'; font-weight:700; font-size:1.5rem;}
+    #shopping .container .title p {font-size:0.9rem;}
+    #shopping .container .contents .tab h2 {width:100%; margin:5px 10px; padding:10px 0;}
+    #shopping .container .contents .tab h2:last-child {display: none;}
+    #shopping .container .contents .product .goods a {margin-right:15px;}
+    #shopping .container .contents .product .goods a:nth-child(2) {margin-right:0;}
+    #shopping .container .contents .product .goods a:nth-child(3) {display:none;}
+    #shopping .container .contents .product .goods a:last-child {display:none;}
+
+
+
+    /* 5월 행사 */
+    #month_event .container {padding:0;}
+    #month_event .container .title {padding:15px 0;}
+    #month_event .container .title h1 {font-family:'KBO-Dia-Gothic-bold'; font-weight:700; font-size:1.5rem;}
+    #month_event .container .title p {font-size:0.9rem;}
+    #month_event .container video {display:none;}
+    #month_event .container .card {display:flex; flex-flow:row wrap;}
+    #month_event .container .card p {width:30%; margin:5px 0;}
+    #month_event .container h2 {font-size:1.5rem;}
+
+     /* 더 많은 정보 */
+    #info_more .container {padding:20px 0;}
+    #info_more .container > * {width:100%;}
+    #info_more .container .info_left .btm_title .title_l {margin-top:10px;}
+    #info_more .container .info_left .btm_title .title_l h1 {font-size:0.9rem;}
+    #info_more .container .info_left .btm_title .title_l h1 span {font-size:1.2rem;}
+    #info_more .container .info_left .btm_title .title_l p {display: none;}
+    #info_more .container .info_left .btm_title a {font-size: 1rem; padding:10px 15px;}
+
+    #info_more .container .info_right {display: none;}
+
+    /* footer */
+    footer .container  {}
+    footer .container .f_top {}
+    footer .container .f_top h1 {width:30%;}
+    footer .container .f_top .top_right {width:55%;}
+    footer .container .f_top .top_right dl dt {font-size:1rem;}
+    footer .container .f_top .top_right dl dd {display: none;}
+    footer .container .f_top .top_right form {display: none;}
+    /* 아래부분 */
+    footer .container .f_btm .btm_left ul li a{font-size: 0.9rem;}
+    footer .container .f_btm .btm_left p {font-size: 0.9rem; line-height: 1.2;}
+    footer .container .f_btm .btm_right {display: none;}
 }

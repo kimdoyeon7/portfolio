@@ -3,7 +3,7 @@ header {
 }
 header .container {
   background-color: #c8c8c8;
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -17,22 +17,22 @@ header .container h1 {
 header .container h1 a img {
   width: 100%;
 }
-header .container > nav {
+header .container > .main_nav {
   background-color: lightpink;
   display: none;
 }
-header .container > nav > ul {
+header .container > .main_nav > ul {
   display: flex;
   line-height: 20px;
   justify-content: space-between;
 }
-header .container > nav > ul > li {
+header .container > .main_nav > ul > li {
   display: flex;
   flex-flow: column nowrap;
   background-color: lightsalmon;
   position: relative;
 }
-header .container > nav > ul > li > a {
+header .container > .main_nav > ul > li > a {
   background-color: #ff6d00;
   font-family: "KBO-Dia-Gothic-medium";
   font-weight: 500;
@@ -42,33 +42,83 @@ header .container > nav > ul > li > a {
   display: block;
   width: 150px;
 }
-header .container > nav > ul > li .sub {
+header .container > .main_nav > ul > li .sub {
   background-color: wheat;
   position: absolute;
   left: 0;
   top: 50px;
   width: 150px;
 }
-header .container > nav > ul > li .sub > li > a {
+header .container > .main_nav > ul > li .sub > li > a {
   font-weight: 500;
   line-height: 3;
 }
-header .container > nav > ul > li .sub > li > a:hover {
+header .container > .main_nav > ul > li .sub > li > a:hover {
   color: #259546;
 }
 header .container .menu {
   background-color: lightblue;
   display: flex;
   flex-flow: column wrap;
+  display: none;
 }
-header .container .menu > .ham {
+header .container .menu .ham {
   display: block;
   background-color: #259546;
 }
-header .container .menu > .ham span {
+header .container .menu .ham span {
   display: block;
   background-color: #000;
   border-radius: 10px;
+  width: 40px;
+  height: 7px;
+  margin: 4px 0;
+}
+header .container .re_nav {
+  background-color: pink;
+  z-index: 999;
+}
+header .container .re_nav > ul {
+  display: flex;
+  justify-content: space-between;
+  line-height: 20px;
+}
+header .container .re_nav > ul > li {
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+}
+header .container .re_nav > ul > li > a {
+  background-color: #259546;
+  font-family: "KBO-Dia-Gothic-medium";
+  font-weight: 500;
+  line-height: 50px;
+  margin-right: 20px;
+  text-align: left;
+  width: 150px;
+}
+header .container .re_nav > ul > li .sub {
+  background-color: wheat;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 150px;
+}
+header .container .re_nav > ul > li .sub > li > a {
+  font-weight: 500;
+  line-height: 3;
+}
+header .container .re_nav > ul > li .sub > li > a:hover {
+  color: #259546;
+}
+header .container .re_nav_bg {
+  background-color: #fff;
+  width: 100%;
+  height: 350px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 888;
 }
 header .container .search {
   background-color: #fff;
@@ -107,7 +157,7 @@ header .containerBg {
 }
 #banner .bnr_wrap {
   background-color: #259546;
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
   height: 600px;
 }
@@ -133,7 +183,7 @@ header .containerBg {
 }
 #shopping .container {
   background-color: #c8c8c8;
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
   padding: 50px 70px;
 }
@@ -150,13 +200,14 @@ header .containerBg {
   display: flex;
   justify-content: center;
   border-bottom: 2px solid #000;
+  width: 100%;
 }
 #shopping .container .contents .tab h2 {
   background-color: lime;
   text-align: center;
   padding: 20px 0;
   margin: 50px 40px 0;
-  width: 120px;
+  width: 23%;
 }
 #shopping .container .contents .product .goods {
   display: flex;
@@ -184,7 +235,7 @@ header .containerBg {
   background-image: url(../images/web_project_1/month_event_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
   padding: 50px 70px;
   text-align: center;
@@ -246,7 +297,7 @@ header .containerBg {
   background-color: lightseagreen;
 }
 #info_more .container {
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   background-color: lightblue;
@@ -297,7 +348,7 @@ footer {
   background-color: lightsalmon;
 }
 footer .container {
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   flex-flow: column wrap;
@@ -308,11 +359,14 @@ footer .container .f_top {
   background-color: lightblue;
   margin-top: 40px;
 }
+footer .container .f_top h1 img {
+  width: 100%;
+}
 footer .container .f_top .top_right {
   display: flex;
   justify-content: space-between;
   background-color: lightcoral;
-  width: 700px;
+  width: 50%;
 }
 footer .container .f_top .top_right dl dt {
   font-weight: 600;
@@ -346,7 +400,7 @@ footer .container .f_btm {
   display: flex;
   justify-content: space-between;
   background-color: red;
-  margin-top: 150px;
+  margin-top: 10%;
 }
 footer .container .f_btm .btm_left {
   display: flex;
@@ -358,6 +412,9 @@ footer .container .f_btm .btm_left ul {
 }
 footer .container .f_btm .btm_left ul li a:first-child {
   margin-right: 10px;
+}
+footer .container .f_btm .btm_left p {
+  line-height: 1.5;
 }
 footer .container .f_btm .btm_right address {
   line-height: 1.5;

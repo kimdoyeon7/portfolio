@@ -16,7 +16,7 @@
     <header>
         <div class="container">
             <h1><a href="#"><img src="./images/web_project_1/7eleven_logo.png" alt="7eleven"></a></h1>
-            <nav>
+            <nav class="main_nav">
                 <ul>
                     <li>
                         <a href="#">EVENT</a>
@@ -60,57 +60,58 @@
                     </li>
                 </ul>
             </nav>
-            <div class="menu">
+            <div class="menu tablet">
                 <a href="#" class="ham">
                     <span></span>
                     <span></span>
                     <span></span>
                 </a>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#">EVENT</a>
-                            <ul class="sub">
-                                <li><a href="#">진행중인 이벤트</a></li>
-                                <li><a href="#">완료 이벤트</a></li>
-                                <li><a href="#">온라인 갤러리</a></li>
-                                <li><a href="#">어린이 미술대회</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">PRODUCT</a>
-                            <ul class="sub">
-                                <li><a href="#">Fresh Food</a></li>
-                                <li><a href="#">세븐카페</a></li>
-                                <li><a href="#">이달의 증정할인</a></li>
-                                <li><a href="#">할인·멤버십 카드</a></li>
-                                <li><a href="#">서비스안내</a></li>
-                                <li><a href="#">스마트픽</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">ABOUT 7-ELEVEN</a>
-                            <ul class="sub">
-                                <li><a href="#">회사소개·경영방침</a></li>
-                                <li><a href="#">공지사항</a></li>
-                                <li><a href="#">채용안내</a></li>
-                                <li><a href="#">고객의 소리</a></li>
-                                <li><a href="#">7-Social</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">창업안내</a>
-                            <ul class="sub">
-                                <li><a href="#">가이드·상담</a></li>
-                                <li><a href="#">창업설명회 안내</a></li>
-                                <li><a href="#">창업점포추천</a></li>
-                                <li><a href="#">경영주 성공기</a></li>
-                                <li><a href="#">경영주 계약서조회</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
             </div>
+            <nav class="re_nav tablet">
+                <ul>
+                    <li>
+                        <a href="#">EVENT</a>
+                        <ul class="sub">
+                            <li><a href="#">진행중인 이벤트</a></li>
+                            <li><a href="#">완료 이벤트</a></li>
+                            <li><a href="#">온라인 갤러리</a></li>
+                            <li><a href="#">어린이 미술대회</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">PRODUCT</a>
+                        <ul class="sub">
+                            <li><a href="#">Fresh Food</a></li>
+                            <li><a href="#">세븐카페</a></li>
+                            <li><a href="#">이달의 증정할인</a></li>
+                            <li><a href="#">할인·멤버십 카드</a></li>
+                            <li><a href="#">서비스안내</a></li>
+                            <li><a href="#">스마트픽</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">ABOUT 7-ELEVEN</a>
+                        <ul class="sub">
+                            <li><a href="#">회사소개·경영방침</a></li>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">채용안내</a></li>
+                            <li><a href="#">고객의 소리</a></li>
+                            <li><a href="#">7-Social</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">창업안내</a>
+                        <ul class="sub">
+                            <li><a href="#">가이드·상담</a></li>
+                            <li><a href="#">창업설명회 안내</a></li>
+                            <li><a href="#">창업점포추천</a></li>
+                            <li><a href="#">경영주 성공기</a></li>
+                            <li><a href="#">경영주 계약서조회</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="re_nav_bg"></div>
             <form action="#" method="get" class="search"> <!-- action은 이 페이지로 가라라는 뜻 -->
                 <input type="search" name="search" placeholder="전국 점포를 찾아보세요." maxlength="15">
                 <button type="submit"><img src="./images/web_project_1/search_icon.png" alt=""></button>
@@ -168,7 +169,8 @@
                 </div>
             </div>
         </div>
-        <!-- 이달의 쇼핑 찬스 -->
+        <!-- 이달의 쇼핑 찬스  끝-->
+        <!-- 5월 단독 행사 시작 -->
         <div id="month_event">
             <div class="container">
                 <div class="title">
@@ -186,10 +188,10 @@
                 <h2>결제 시<span>1+1</span>부터 <span>35%</span>현장할인까지!</h2>
             </div>
         </div>
-        <!-- 5월 단독 행사 -->
+        <!-- 5월 단독 행사 끝 -->
         <div id="info_more">
             <div class="container">
-                <div class="info_left">
+                <div class="info_left contents">
                     <!-- <p><img src="./images/web_project_1/info_more_bg1.jpg" alt=""></p> -->
                     <div class="info_bg"></div>
                     <div class="btm_title">
@@ -200,7 +202,7 @@
                         <a href="#">자세히보기</a>
                     </div>
                 </div>
-                <div class="info_right">
+                <div class="info_right contents">
                     <!-- <p><img src="./images/web_project_1/info_more_bg1.jpg" alt=""></p> -->
                     <div class="info_bg"></div>
                     <div class="btm_title">
