@@ -297,32 +297,23 @@
   display: inline-block;
   width: 380px;
   position: relative;
+  overflow: hidden;
+  height: 450px;
 }
 .wrap #detail .container .detail_contents .contents a img {
   width: 100%;
 }
-.wrap #detail .container .detail_contents .contents a span {
-  opacity: 0;
-  font-family: "inter", sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  display: inline-block;
-  text-align: center;
+.wrap #detail .container .detail_contents .contents a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
   position: absolute;
-  left: 150px;
-  top: 200px;
-  z-index: 999;
-  /* background-color: #fff; */
-  border: 2px solid #000;
-  width: 100px;
-  height: 100px;
-  border-radius: 150px;
-  padding-top: 30px;
-  transition: all 0.3s;
+  top: 0;
 }
-.wrap #detail .container .detail_contents .contents a:hover > span {
-  opacity: 1;
-  animation: click_btn 0.3s linear;
+.wrap #detail .container .detail_contents .contents a:hover::after {
+  display: none;
 }
 .wrap #redesign {
   position: relative;

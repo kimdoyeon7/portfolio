@@ -4,6 +4,11 @@ const swiper_sns = document.querySelectorAll('#sns .all_contents .swiper-slide')
 let imgC = document.createElement('img')
 big_sns.style.display = 'none'
 
+//--------------------------------------------------------------------
+
+
+
+//------------------------------------------------------------------
 swiper_sns.forEach((t,i)=>{
     t.addEventListener('click',(e)=>{
         e.preventDefault()
@@ -55,7 +60,8 @@ const swiper = new Swiper('#sns .all_contents', {
 });
 
 //----------------------------------------------------------------
-// swiper-slide > img 누르면 sns디자인 크게 뜨게
+
+
 
 
 
@@ -114,3 +120,38 @@ i_arrow.addEventListener('click',(e)=>{
     // behavior: 'smooth'
 
 })
+
+
+
+// swiper_sns.forEach((t,i)=>{
+//     t.addEventListener('click',(e)=>{
+//         e.preventDefault()
+//         console.log('----------')
+//         console.log(i)
+//         imgC.src = `./images/index/sns_design_${i+1}.jpg`
+//         big_sns.style.display = 'block'
+//         big_sns.children[0].appendChild(imgC)
+//         /* big_sns.innerHTML = i+1
+//         big_sns.style.display = 'block' */
+//     })
+// })
+
+// detail a img 누르면 크게 나오도록
+const detail_img = document.querySelectorAll('#detail .contents a')
+
+detail_img.forEach((t,i)=>{
+    t.addEventListener('click',(e)=>{
+        e.preventDefault()
+        imgC.src = `./images/index/detail${i+1}.jpg`
+        big_sns.style.display = 'block'
+        big_sns.children[0].appendChild(imgC)
+        // big_sns-webkit-scrollbar-width:10px;
+    })
+})
+
+// -webkit-tap-highlight-color:rgba(0,0,0,0);
+
+// ::-webkit-scrollbar /*스크롤바의 너비*/
+
+// ::-webkit-scrollbar-thumb /*스크롤바의 색상*/
+// ::-webkit-scrollbar-track /* 스크롤바 트랙 색상 */

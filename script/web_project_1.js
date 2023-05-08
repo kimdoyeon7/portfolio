@@ -60,8 +60,12 @@ tab.forEach(function(t,i){
     // console.log(this)
     t.addEventListener('click',()=>{
         // console.log(this)
-        for(i of tab){i.classList.remove('active');}
+        for(j of tab){j.classList.remove('active');}
         t.classList.add('active');
-        for(i of goods){i.style.display}
+        for(j of goods){
+            j.style.display = 'none'
+        };
+        goods[i].style.display = 'flex'
+        console.log(goods)
     })
 })
