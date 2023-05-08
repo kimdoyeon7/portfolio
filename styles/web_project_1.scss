@@ -14,9 +14,12 @@ $colorW:#fff;
 
 
 header {
-    background-color: #ff0;
+    // background-color: #ff0;
+    background-color: $color6;
+    // background-color: #c8c8c8;
     .container {
-        background-color: #c8c8c8;
+        // background-color: #c8c8c8;
+        
         @include layout();
         display:flex; justify-content: space-between; align-items: center;
         position:relative; z-index:999;
@@ -32,10 +35,10 @@ header {
                 justify-content: space-between;
                 > li {
                     display:flex; flex-flow: column nowrap;
-                    background-color:lightsalmon;
+                    // background-color:lightsalmon;
                     position:relative;
                     > a {
-                        background-color:#ff6d00; 
+                        // background-color:#ff6d00; 
                         @include font1;
                         line-height:50px;
                         margin-right:20px; text-align: center;
@@ -43,7 +46,7 @@ header {
                         width:150px;
                     }
                     .sub{
-                        background-color: wheat;
+                        // background-color: wheat;
                         position:absolute; left:0; top:50px;
                         width:150px;
                         > li {
@@ -58,12 +61,12 @@ header {
             }
         }
         .menu {
-            background-color: lightblue;
+            // background-color: lightblue;
             display:flex; flex-flow: column wrap;
             display:none;
             .ham {
                 display: block;
-                background-color: #259546;
+                // background-color: #259546;
                 span {
                     display:block;
                     background-color: $colorB;
@@ -74,7 +77,8 @@ header {
             }
         }
         .re_nav {
-            background-color: pink; z-index: 999;
+            // background-color: pink;
+            z-index: 999;
             display: none;
             > ul {
                 display:flex; 
@@ -84,14 +88,14 @@ header {
                     display: flex; flex-flow: column nowrap;
                     position: relative;
                     > a {
-                        background-color: #259546;
+                        // background-color: #259546;
                         @include font1;
                         line-height: 50px;
                         margin-right: 20px; text-align: left;
                         width: 150px;
                     }
                     .sub {
-                        background-color: wheat;
+                        // background-color: wheat;
                         position:absolute; left:0; top:50px;
                         width:150px;
                         > li {
@@ -138,7 +142,7 @@ header {
     }
 }
 #banner {
-    background: lightcyan;
+    // background: lightcyan;
     .bnr_wrap {
         background-color: #259546;
         @include layout();
@@ -150,19 +154,19 @@ header {
             background-repeat: no-repeat;
             width:100%; height:100%;
         }
-        a:last-child {
-            display: block;
-            background-image: url(../images/web_project_1/bnr1.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            width:100%; height:100%;
-        }
+        // a:last-child {
+        //     display: block;
+        //     background-image: url(../images/web_project_1/bnr1.jpg);
+        //     background-size: cover;
+        //     background-repeat: no-repeat;
+        //     width:100%; height:100%;
+        // }
     }
 }
 #shopping {
-    background-color: palegoldenrod;
+    // background-color: palegoldenrod;
     .container {
-        background-color: #c8c8c8;
+        // background-color: #c8c8c8;
         @include layout();
         padding:50px 70px;
         .title {
@@ -176,7 +180,7 @@ header {
                 position: relative;
                 z-index: 999;
                 h2 {
-                    background-color: lime; 
+                    // background-color: lime; 
                     text-align: center;
                     padding:20px 0; 
                     margin:50px 40px 0;
