@@ -14,7 +14,7 @@ swiper_sns.forEach((t,i)=>{
         e.preventDefault()
         console.log('----------')
         console.log(i)
-        imgC.src = `./images/index/sns_design_${i+1}.jpg`
+        imgC.src = `./images/sns_design_${i+1}.jpg`
         big_sns.style.display = 'block'
         big_sns.children[0].appendChild(imgC)
         /* big_sns.innerHTML = i+1
@@ -84,24 +84,20 @@ const redesign_swiper = new Swiper('#redesign .swiper',{
 
 
 
-
-
-
-
 // --------------------------------------- // 
 // #footer 에서 화살표 누르면 맨 위로 부드럽게 올라가기
 
-const f_arrow = document.querySelector('#footer .arrow')
-// console.log(f_arrow)
+// const f_arrow = document.querySelector('#footer .arrow')
+// // console.log(f_arrow)
 
-f_arrow.addEventListener('click',(e)=>{
-    e.preventDefault(),
-    window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth' // 부드럽게 올라가기
-    });
-})
+// f_arrow.addEventListener('click',(e)=>{
+//     e.preventDefault(),
+//     window.scrollTo({
+//         top: 0,
+//         left: 0,
+//         behavior: 'smooth' // 부드럽게 올라가기
+//     });
+// })
 
 
 // --------------------------------------- // 
@@ -122,36 +118,34 @@ i_arrow.addEventListener('click',(e)=>{
 })
 
 
-
-// swiper_sns.forEach((t,i)=>{
-//     t.addEventListener('click',(e)=>{
-//         e.preventDefault()
-//         console.log('----------')
-//         console.log(i)
-//         imgC.src = `./images/index/sns_design_${i+1}.jpg`
-//         big_sns.style.display = 'block'
-//         big_sns.children[0].appendChild(imgC)
-//         /* big_sns.innerHTML = i+1
-//         big_sns.style.display = 'block' */
-//     })
-// })
-
 // detail a img 누르면 크게 나오도록
 const detail_img = document.querySelectorAll('#detail .contents a')
 
 detail_img.forEach((t,i)=>{
     t.addEventListener('click',(e)=>{
         e.preventDefault()
-        imgC.src = `./images/index/detail${i+1}.jpg`
+        imgC.src = `./images/detail${i+1}.jpg`
         big_sns.style.display = 'block'
         big_sns.children[0].appendChild(imgC)
+        console.log(this)
         // big_sns-webkit-scrollbar-width:10px;
     })
 })
 
-// -webkit-tap-highlight-color:rgba(0,0,0,0);
+// 압정 누르면 #pin_link 나오게
 
-// ::-webkit-scrollbar /*스크롤바의 너비*/
+const pin = document.querySelector('#pin')
+// const pin_img = document.querySelector('#pin img')
+const pin_link = document.querySelector('#pin_link')
+// const link = document.querySelectorAll('#pin_link a')
+console.log(pin, pin_link)
 
-// ::-webkit-scrollbar-thumb /*스크롤바의 색상*/
-// ::-webkit-scrollbar-track /* 스크롤바 트랙 색상 */
+pin_link.style.display ='none'
+
+pin.addEventListener('mouseover',()=>{
+    pin_link.style.display = 'flex'
+})
+pin.addEventListener('mouseout',()=>{
+    pin_link.style.display = 'none'
+})
+

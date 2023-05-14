@@ -1,7 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;800&display=swap');/* 한글 고딕 : noto sans kr */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700;900&display=swap');/* 한글 세리프 : noto serif kr */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');/* 영어 고딕 : inter */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');/* 영어 세리프:Cormorant Garamond */
+/* 한글 손글씨체 */
+@font-face {
+    font-family: 'GangwonEduHyeonokT_OTFMediumA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduHyeonokT_OTFMediumA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 한글 손글씨체 */
+/* 한글고딕 */
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 한글고딕 */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap'); /* 영어 손글씨체 */
+
+
+
+
 
 /* 세븐일레븐 글꼴 */
 @font-face {
@@ -32,7 +50,7 @@ table, tr, th, td, thead,tbody,tfoot
 form, fieldset, legend, input, label, button,textarea, option, select 
 header, main,footer,article,section,aside,nav,figure,figcaption,
 div, span {
-    font-family:'Noto Sans KR',"Font Awesome 5 Free","Font Awesome 5 Brands";
+    font-family:'GmarketSansMedium',"Font Awesome 5 Free","Font Awesome 5 Brands";
     margin:0; padding:0; 
     font-size:1.0rem; 
     font-weight:normal; 
