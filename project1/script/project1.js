@@ -19,7 +19,8 @@
 
 
 // header nav 배경 메뉴와 배경 한꺼번에 나오는것 
-const main_nav = document.querySelectorAll('header .main_nav > ul > li > a') // 메뉴 4개
+// const main_nav = document.querySelectorAll('header .main_nav > ul > li > a') // 메뉴 4개
+const main_nav = document.querySelectorAll('header .main_nav > ul > li') // 메뉴 4개
 const main_navSub = document.querySelectorAll('header .main_nav .sub') // 서브메뉴
 const main_navBg = document.querySelector('header .containerBg') // 메인 서브배경
 console.log(main_nav, main_navSub, main_navBg)
@@ -29,11 +30,11 @@ for (let i of main_navSub){
 }
 
 //반복문
+// nav 메뉴
 main_nav.forEach(function(t,i){
     t.addEventListener('mouseover',()=>{
         for (let i of main_navSub){
             i.style.display = 'block'
-            // i.style.transition = 'all 0.3s'
         }
         main_navBg.style.display = 'block'
         

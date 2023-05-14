@@ -38,7 +38,7 @@ const swiper = new Swiper('#sns .all_contents', {
         slideChange: function () { // swiper 공식 | 현재 활성 슬라이드가 변경되면 이벤트가 시작
             const activeIndex = this.activeIndex; // 변수 activeIndex 는 여기서 activeIndex는 활성화된 .activeIndex를 의미함.
             // console.log(activeIndex)
-            const slides = this.slides; // 변수 slides는 #banner .swiper의 slides
+            const slides = this.slides; // 변수 slides는 #sns .swiper의 slides
             slides.forEach((slide, index) => {
                 if (index === activeIndex) {
                     slide.classList.add('active');

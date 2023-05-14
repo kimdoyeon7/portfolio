@@ -40,6 +40,19 @@ html, body {
   scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  height: 10%;
+  background: #000;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 #pin {
   width: 50px;
   position: fixed;
@@ -75,7 +88,7 @@ html, body {
   position: fixed;
   z-index: 1001;
   background-color: rgba(0, 0, 0, 0.7);
-  width: 100%;
+  width: 1100%;
   height: 100vh;
   top: 50%;
   left: 50%;
@@ -84,9 +97,10 @@ html, body {
   cursor: pointer;
 }
 .wrap #project_view .contents {
-  width: 50%;
+  width: -moz-max-content;
+  width: max-content;
   margin: 0 auto;
-  height: 86vh;
+  height: 85vh;
   overflow-y: auto;
 }
 .wrap #project_view .contents::-webkit-scrollbar {
