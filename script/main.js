@@ -83,26 +83,8 @@ const redesign_swiper = new Swiper('#redesign .swiper',{
 
 
 
-
-// --------------------------------------- // 
-// #footer 에서 화살표 누르면 맨 위로 부드럽게 올라가기
-
-// const f_arrow = document.querySelector('#footer .arrow')
-// // console.log(f_arrow)
-
-// f_arrow.addEventListener('click',(e)=>{
-//     e.preventDefault(),
-//     window.scrollTo({
-//         top: 0,
-//         left: 0,
-//         behavior: 'smooth' // 부드럽게 올라가기
-//     });
-// })
-
-
 // --------------------------------------- // 
 // #intro 에서 화살표 누르면 맨 위로 부드럽게 내려가기
-
 const i_arrow = document.querySelector('#intro .arrow_down')
 const info = document.querySelector('#info')
 // console.log(i_arrow)
@@ -132,8 +114,29 @@ detail_img.forEach((t,i)=>{
     })
 })
 
-// 압정 누르면 #pin_link 나오게
 
+// card a img 누르면 크게 나오도록
+const card_img = document.querySelectorAll('#card .contents a')
+
+card_img.forEach((t,i)=>{
+    t.addEventListener('click',(e)=>{
+        e.preventDefault()
+        imgC.src = `./images/card${i+1}.jpg`
+        big_sns.style.display = 'block'
+        big_sns.children[0].appendChild(imgC)
+        console.log(this)
+        // big_sns-webkit-scrollbar-width:10px;
+    })
+})
+
+
+
+
+
+
+
+
+// 압정 누르면 #pin_link 나오게
 const pin = document.querySelector('#pin')
 // const pin_img = document.querySelector('#pin img')
 const pin_link = document.querySelector('#pin_link')

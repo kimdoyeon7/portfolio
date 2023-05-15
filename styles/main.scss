@@ -1,8 +1,8 @@
 // 전체넓이는 1600px
-$colorMain1: #d5d5d5;
+$color1: #d5d5d5;
 // $colorMain2: #FFEDBC;
 // $colorMain3: #FFD4D4;
-// $colorMain4: #A6A5A5;
+$color4: #A6A5A5;
 $colorB:#000;
 $colorW:#fff;
 // $fontNotoSerif:'Noto Serif KR',serif;
@@ -200,7 +200,7 @@ body::-webkit-scrollbar-track {background:transparent;}
         .container{
             @include bigLayout(); 
             // background-color: lightcyan;
-            border-top:1px solid $colorMain1;
+            border-top:1px solid $color1;
             // border-right:0; border-left:0;
             h1::before{
                 content:''; display: block;
@@ -247,9 +247,9 @@ body::-webkit-scrollbar-track {background:transparent;}
                     bottom:-70px;
                 }
                 .swiper-pagination-bullet {
-                    width:10px; height:10px; background:transparent; border: 1px solid $colorB; opacity: 1; 
+                    width:5px; height:5px; background:transparent; border: 1px solid $colorB; opacity: 1; 
                 }
-                .swiper-pagination-bullet-active { width:50px; height:15px; border-radius: 10px; background: $colorB; }
+                .swiper-pagination-bullet-active { width:30px; height:10px; border-radius: 10px; background: $colorB; }
                 .swiper-button-next:after,
                 .swiper-button-prev:after {
                     display: none;
@@ -263,6 +263,7 @@ body::-webkit-scrollbar-track {background:transparent;}
         .container {
             @include bigLayout();
             // background-color: aquamarine;
+            // border-bottom:1px solid $color4;
             h1::before{
                 content:''; display: block;
                 width:20px; height:7px;
@@ -284,6 +285,50 @@ body::-webkit-scrollbar-track {background:transparent;}
                         position:relative;
                         overflow: hidden;
                         height:450px;
+                        img{width: 100%;}
+                    }//e:a 
+                    a::after {
+                        content:'';
+                        display:block; 
+                        width:100%; height:100%; 
+                        background:rgba(0, 0, 0, 0.3);
+                        position:absolute; top:0;
+                    }
+                    a:hover::after {display:none;}
+                    a::-webkit-scrollbar-thumb {background: #fff;border: 4px solid #000;}
+                } //e:공통 contents
+            }
+        }
+    }
+    #card {
+        position:relative;
+        // background-color: greenyellow;
+        background : linear-gradient(transparent, white);
+        .container {
+            @include bigLayout();
+            // background-color: aquamarine;
+            height:85vh;
+            h1::before{
+                content:''; display: block;
+                width:20px; height:7px;
+                background:$colorB;
+                transform: rotate(45deg);
+                // border-radius:10px;
+                position: relative; top:0; right:25px;
+            }
+            h1 {@include title(); padding:100px;}
+            .card_contents {
+                display:grid; grid-template-columns: repeat(3,1fr);
+                .contents {
+                    justify-content: center; 
+                    text-align: center;
+                    a {
+                        // background-color:#FFD4D4;
+                        display:inline-block;
+                        width:380px;
+                        position:relative;
+                        overflow: hidden;
+                        height:380px;
                         img{width: 100%;}
                     }//e:a 
                     a::after {

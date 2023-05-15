@@ -1,25 +1,60 @@
-// e70089
+$color_main:#e70089;
 // body{background-color: yellow;}
 $colorB:#000;
+$colorW:#fff;
 
 @mixin layout {width:80%; margin:0 auto;}
 
 header{
     background-color:$colorB;
-    .container {
-        background-color: aquamarine;
+    background-attachment:local;
+    // background-position: scroll;
+    .wrap {
+        // background-color: aquamarine;
         @include layout();
-        h1{    text-align: center;
+        h1{ text-align: center;
             a { display:inline-block; width:10%;
                 img{width:100%;}
             }
         }
         p {
-            background-color: pink;
-            margin:100px 0;
-            font-size:2.5rem;
+            // background-color: pink;
+            margin-top:100px;
+            padding-bottom:220px;
+            font-size:2.1rem;
             line-height:1.2;
-            span {font-size:2.5rem; line-height:1.2;}
+            color:$colorW;
+            span {font-size:2.1rem; line-height:1.2;}
+        }
+    }
+}
+
+main {
+    background-color: yellow;
+    .wrap{
+        @include layout();
+        .container1 {
+            position:relative;
+            // position: absolute; top:0; left:50%;
+            .product_img {
+                width:20%;
+                position: absolute; top:0; left:50%;
+                transform:translate(-50%,-50%);
+                img{width:100%;}
+            }
+            .content {}
+        }
+        .container2 {
+            background-color: greenyellow;
+            display: flex; justify-content:space-around;
+            margin-bottom:1100px;
+            .title {}
+            > p {}
+            .key7{
+                p {
+                    span{color:$color_main;}
+                }
+            }
         }
     }
 }
