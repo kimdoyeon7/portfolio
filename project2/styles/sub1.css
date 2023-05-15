@@ -1,0 +1,28 @@
+header {
+  background-color: #000;
+}
+header .container {
+  background-color: aquamarine;
+  width: 80%;
+  margin: 0 auto;
+}
+header .container h1 {
+  text-align: center;
+}
+header .container h1 a {
+  display: inline-block;
+  width: 10%;
+}
+header .container h1 a img {
+  width: 100%;
+}
+header .container p {
+  background-color: pink;
+  margin: 100px 0;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+header .container p span {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}/*# sourceMappingURL=sub1.css.map */

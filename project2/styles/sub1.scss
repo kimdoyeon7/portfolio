@@ -1,0 +1,25 @@
+// e70089
+// body{background-color: yellow;}
+$colorB:#000;
+
+@mixin layout {width:80%; margin:0 auto;}
+
+header{
+    background-color:$colorB;
+    .container {
+        background-color: aquamarine;
+        @include layout();
+        h1{    text-align: center;
+            a { display:inline-block; width:10%;
+                img{width:100%;}
+            }
+        }
+        p {
+            background-color: pink;
+            margin:100px 0;
+            font-size:2.5rem;
+            line-height:1.2;
+            span {font-size:2.5rem; line-height:1.2;}
+        }
+    }
+}

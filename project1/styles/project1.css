@@ -223,7 +223,7 @@ header .containerBg {
 }
 
 #month_event {
-  background-image: url(../images/month_event_bg.jpg);
+  background: url(../images/month_event_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -294,12 +294,18 @@ header .containerBg {
   height: 100%;
 }
 #info_more .container > * > .info_bg {
-  width: 100%;
+  width: 90%;
   height: 220px;
-  background-image: url(../images/info_more_bg1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 30px;
+  background-position: center;
+}
+#info_more .container > * > .info_bg1 {
+  background-image: url(../images/info_more_bg1.jpg);
+}
+#info_more .container > * > .info_bg2 {
+  background-image: url(../images/info_more_bg2.jpg);
 }
 #info_more .container > * > .btm_title {
   display: flex;

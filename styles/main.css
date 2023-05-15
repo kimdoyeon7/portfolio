@@ -31,6 +31,10 @@
     transform: scale(1);
   }
 }
+* {
+  cursor: url(../images/cursor.png), auto;
+}
+
 html, body {
   background-image: url(../images/html_bg.png);
   background-size: cover;
@@ -94,7 +98,7 @@ body::-webkit-scrollbar-track {
   left: 50%;
   transform: translate(-50%, -50%);
   padding-top: 80px;
-  cursor: pointer;
+  cursor: url(../images/cursor2.png), auto;
 }
 .wrap #project_view .contents {
   width: -moz-max-content;

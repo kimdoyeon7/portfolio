@@ -230,9 +230,10 @@ header {
 }
 #month_event {
     // background-color: #c8c8c8;
-    background-image: url(../images/month_event_bg.jpg);
-        background-repeat: no-repeat;
-        background-size:cover;
+    background: url(../images/month_event_bg.jpg) ;
+    background-repeat: no-repeat;
+    background-size:cover;
+    // filter:blur(5px);
     .container {
         // background-color: lightgreen;
         @include layout();
@@ -284,16 +285,16 @@ header {
             height:100%;
             // background-color: lightcyan;
             > .info_bg {
-                // height:700px; 
-                width:100%; 
+                width:90%; 
                 height:220px;
-                background-image:url(../images/info_more_bg1.jpg);
+                // background-image:url(../images/info_more_bg1.jpg);
                 background-size:cover;
                 background-repeat: no-repeat;
                 border-radius:30px;
+                background-position: center;
             }
-            > .info_bg1  {}
-            > .info_bg2  {}
+            > .info_bg1  {background-image:url(../images/info_more_bg1.jpg);}
+            > .info_bg2  {background-image:url(../images/info_more_bg2.jpg);}
             > .btm_title {
                 display: flex; justify-content: space-between;
                 margin-top:10px;
