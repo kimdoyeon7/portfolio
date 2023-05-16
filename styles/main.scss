@@ -213,6 +213,7 @@ body::-webkit-scrollbar-track {background:transparent;}
             h1 {@include title();}
             .container_btm{
                 position:relative;
+                // background-color: pink;
                 .wrap {
                     margin: 0 auto;
                     overflow:hidden; padding:50px 0; // padding값은 부모의 크기(영역)을 더 크게 만들기 위해서 준 값.
@@ -220,6 +221,7 @@ body::-webkit-scrollbar-track {background:transparent;}
                     transition:all 0.3s;
                     .all_contents {
                         overflow:visible !important;
+                        background-color: pink;
                         .contents {
                             position: relative;
                             width:10%;
@@ -300,10 +302,90 @@ body::-webkit-scrollbar-track {background:transparent;}
             }
         }
     }
+    #banner {
+        background-color: $colorW;
+        .container{
+            @include bigLayout(); 
+            background-color: lightcyan;
+            border-top:1px solid $color1;
+            height:max-content;
+            // border-right:0; border-left:0;
+            h1::before{
+                content:''; display: block;
+                width:20px; height:7px;
+                background:$colorB;
+                transform: rotate(45deg);
+                // border-radius:10px;
+                position: relative; top:0; right:25px;
+            }
+            h1 {@include title(); padding:100px;}
+            .container_btm{
+                background-color: pink;
+                position:relative;
+                // height: 100vh; overflow: hidden;
+                padding:100px;
+                .wrap {
+                    background-color:red;
+                    // height:786px; 
+                    // overflow: hidden; 
+                    width:1400px; margin:0 auto;
+                    .bnr_all_contents {
+                        background-color: yellow;
+                        width:1200px; margin:0 auto;
+                        height:786px; 
+                        display: flex; flex-flow:column wrap; align-items: center;
+                        // overflow:visible !important;
+                        // overflow: hidden;
+                        // position:relative; 
+                        // position:absolute;
+                        // z-index:999;
+                        // padding:0 100px;
+                        // height:872px; 
+                        // overflow: hidden;
+                        .bnr_contents {
+                            background-color: green;
+                            width:75%; 
+                            // height:100%;
+                            // position:absolute; z-index:99;
+                            display:flex; flex-flow:column nowrap; 
+                            // position:absolute;
+                            .swiper-slide {
+                                display:flex; flex-flow:column wrap; 
+                                a {
+                                    display: inline-block;
+                                    // background-color: blue;
+                                    img{width:100%;}
+                                }
+                            }//e:swiper-slide
+                            .active {
+                                transform:scale(1.2); 
+                                // !important;
+                                background-color: lime;
+                            }
+                        }//e:contents
+                    }//e:all_contents
+                }
+                /* .swiper-pagination {
+                    // background: lime;
+                    display:flex; justify-content: center; align-items: center;
+                    bottom:-70px;
+                }
+                .swiper-pagination-bullet {
+                    width:5px; height:5px; background:transparent; border: 1px solid $colorB; opacity: 1; 
+                }
+                .swiper-pagination-bullet-active { width:30px; height:10px; border-radius: 10px; background: $colorB; }
+                .swiper-button-next:after,
+                .swiper-button-prev:after {
+                    display: none;
+                } */
+                // .swiper-button-next {right:-50px;}
+            }
+        }
+    }
     #card {
         position:relative;
         // background-color: greenyellow;
-        background : linear-gradient(transparent, white);
+        // background : linear-gradient(transparent , white );
         .container {
             @include bigLayout();
             // background-color: aquamarine;
