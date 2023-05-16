@@ -1,28 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;800&display=swap');/* 한글 고딕 : noto sans kr */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700;900&display=swap');/* 한글 세리프 : noto serif kr */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');/* 영어 고딕 : inter */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');/* 영어 세리프:Cormorant Garamond */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Noto+Sans+KR:wght@300;400;500&display=swap');
+@font-face {
+    font-family: 'GmarketSanslight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} 
+@font-face {
+    font-family: 'GmarketSansbold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} 
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 한글·영어고딕 */
 
-/* 세븐일레븐 글꼴 */
 @font-face {
-    font-family: 'KBO-Dia-Gothic-light';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_light.woff') format('woff');
-    font-weight: 300;
+    font-family: 'ghanachoco';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
 }
-@font-face {
-    font-family: 'KBO-Dia-Gothic-medium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'KBO-Dia-Gothic-bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-}
-
+/* 영어필기체 */
 
 * {box-sizing:border-box;}
 html,body,h1,h2,h3,h4,h5,h6,
@@ -32,7 +35,7 @@ table, tr, th, td, thead,tbody,tfoot
 form, fieldset, legend, input, label, button,textarea, option, select 
 header, main,footer,article,section,aside,nav,figure,figcaption,
 div, span {
-    font-family:'Noto Sans KR',"Font Awesome 5 Free","Font Awesome 5 Brands";
+    font-family:'GmarketSanslight',"Font Awesome 5 Free","Font Awesome 5 Brands";
     margin:0; padding:0; 
     font-size:1.0rem; 
     font-weight:normal; 
@@ -43,8 +46,6 @@ div, span {
 a {text-decoration:none; color:#000;}
 table,tr,th,td {border-collapse:collapse;}
 button {cursor:pointer; border:none; background:none;}
-fieldset {border:0;}
-legend {display:none;}
 .skip {display:none;}
 .awesome::after,
 .awesome::before {font-weight:600;}

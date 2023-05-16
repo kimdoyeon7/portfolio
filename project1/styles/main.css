@@ -1,0 +1,200 @@
+body {
+  background-color: #d9c1af;
+}
+
+header {
+  background-image: url(../images/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-position: bottom center;
+  background-attachment: fixed;
+}
+header .wrap {
+  width: 85%;
+  margin: 0px auto;
+}
+header .wrap > * {
+  color: #fff;
+}
+header .wrap h1 {
+  width: 120px;
+}
+header .wrap h1 > a img {
+  width: 100%;
+}
+header .wrap .nav_wrap {
+  margin-top: 50px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+header .wrap .nav_wrap .main_nav ul li a {
+  line-height: 2;
+  color: #fff;
+}
+header .wrap .nav_wrap .main_nav ul li a:hover {
+  color: #000;
+  font-weight: 700;
+}
+header .wrap .nav_wrap .main_nav .search a {
+  background-image: url(../images/search.png);
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  margin-top: 25px;
+  display: block;
+}
+header .wrap .nav_wrap .main_nav .search a img {
+  width: 100%;
+}
+header .wrap .nav_wrap .main_nav .search a:hover {
+  background-image: url(../images/search_b.png);
+}
+header .wrap .nav_wrap .main_nav .user {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-top: 10px;
+}
+header .wrap .nav_wrap .main_nav .user > a {
+  background-image: url(../images/user.png);
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+header .wrap .nav_wrap .main_nav .user > a img {
+  width: 100%;
+}
+header .wrap .nav_wrap .main_nav .user .user_link {
+  display: flex;
+  flex-flow: column wrap;
+  margin-top: 10px;
+}
+header .wrap .nav_wrap .main_nav .user .user_link > a {
+  color: #fff;
+  line-height: 2;
+}
+header .wrap .nav_wrap .main_nav .user .user_link > a:hover {
+  color: #000;
+  font-weight: 700;
+}
+header .wrap .nav_wrap .main_nav .user > a:hover {
+  background-image: url(../images/user_b.png);
+}
+main .wrap {
+  width: 85%;
+  margin: 0px auto;
+}
+main .wrap .slogan {
+  margin: 200px 0;
+}
+main .wrap .slogan p:first-child {
+  font-family: "DM Serif Display", serif;
+  font-size: 5rem;
+}
+main .wrap .slogan p:last-child {
+  font-size: 1.8rem;
+  margin-top: 15px;
+}
+main .wrap .md_pick {
+  background-color: aquamarisne;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  position: relative;
+}
+main .wrap .md_pick .title h1 {
+  font-size: 3rem;
+  font-family: "GmarketSansbold", sans-serif;
+}
+main .wrap .md_pick .title .more {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+main .wrap .md_pick .title .more p {
+  display: inline-block;
+  font-family: "GmarketSansMedium", sans-serif;
+  font-size: 1.7rem;
+  transform: translateY(10%);
+}
+main .wrap .md_pick .title .more a {
+  display: inline-block;
+  width: 30px;
+  margin-left: 10px;
+  background-image: url(../images/more.png);
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin-left: 10px;
+}
+main .wrap .md_pick .title .more a:hover {
+  background-image: url(../images/more_w.png);
+}
+main .wrap .md_pick .product_wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0 50px;
+  position: relative;
+  padding-bottom: 200px;
+}
+main .wrap .md_pick .product_wrap .product_container {
+  width: 80%;
+  position: relative;
+}
+main .wrap .md_pick .product_wrap .product_container .product {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+  transition: all 0.8s;
+}
+main .wrap .md_pick .product_wrap .product_container .product .pro_name {
+  width: 100%;
+  text-align: right;
+  font-size: 1.5rem;
+  font-family: "GmarketSansMedium", sans-serif;
+}
+main .wrap .md_pick .product_wrap .product_container .product .pro_name span {
+  font-size: 1.4rem;
+}
+main .wrap .md_pick .product_wrap .product_container .product .pro_img {
+  width: 90%;
+}
+main .wrap .md_pick .product_wrap .product_container .product .pro_img img {
+  width: 100%;
+  border-radius: 50%;
+}
+main .wrap .md_pick .product_wrap .product_container .product2, main .wrap .md_pick .product_wrap .product_container .product3 {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+footer {
+  background-color: #000;
+  padding: 50px 0;
+}
+footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0px auto;
+}
+footer .wrap > * {
+  color: #fff;
+}
+footer .wrap h1 {
+  width: 120px;
+}
+footer .wrap h1 a img {
+  width: 100%;
+}
+footer .wrap .privacy {
+  text-align: right;
+}
+footer .wrap .privacy p {
+  line-height: 2;
+}/*# sourceMappingURL=main.css.map */
