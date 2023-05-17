@@ -301,7 +301,7 @@ body::-webkit-scrollbar-track {
   font-size: 3rem;
   font-family: "Caveat Brush", serif;
   font-weight: 800;
-  padding: 100px 0 150px 100px;
+  padding: 100px;
 }
 .wrap #sns .container .container_btm {
   position: relative;
@@ -315,7 +315,6 @@ body::-webkit-scrollbar-track {
 }
 .wrap #sns .container .container_btm .wrap .all_contents {
   overflow: visible !important;
-  background-color: pink;
 }
 .wrap #sns .container .container_btm .wrap .all_contents .contents {
   position: relative;
@@ -347,8 +346,7 @@ body::-webkit-scrollbar-track {
 .wrap #sns .container .container_btm .swiper-pagination-bullet {
   width: 5px;
   height: 5px;
-  background: transparent;
-  border: 1px solid #000;
+  background: #000;
   opacity: 1;
 }
 .wrap #sns .container .container_btm .swiper-pagination-bullet-active {
@@ -384,7 +382,7 @@ body::-webkit-scrollbar-track {
   font-size: 3rem;
   font-family: "Caveat Brush", serif;
   font-weight: 800;
-  padding: 100px 0 150px 100px;
+  padding: 100px;
 }
 .wrap #detail .container .detail_contents {
   display: grid;
@@ -427,7 +425,6 @@ body::-webkit-scrollbar-track {
   width: 1600px;
   height: 100vh;
   margin: 0 auto;
-  background-color: lightcyan;
   border-top: 1px solid #d5d5d5;
   height: -moz-max-content;
   height: max-content;
@@ -447,60 +444,61 @@ body::-webkit-scrollbar-track {
   font-size: 3rem;
   font-family: "Caveat Brush", serif;
   font-weight: 800;
-  padding: 100px 0 150px 100px;
+  padding: 100px;
   padding: 100px;
 }
 .wrap #banner .container .container_btm {
-  background-color: pink;
   position: relative;
-  padding: 100px;
-  /* .swiper-pagination {
-      // background: lime;
-      display:flex; justify-content: center; align-items: center;
-      bottom:-70px;
-  }
-  .swiper-pagination-bullet {
-      width:5px; height:5px; background:transparent; border: 1px solid $colorB; opacity: 1; 
-  }
-  .swiper-pagination-bullet-active { width:30px; height:10px; border-radius: 10px; background: $colorB; }
-  .swiper-button-next:after,
-  .swiper-button-prev:after {
-      display: none;
-  } */
+  padding: 0 50px;
 }
 .wrap #banner .container .container_btm .wrap {
-  background-color: red;
-  width: 1400px;
+  overflow: hidden;
+  padding: 0 50px;
+  width: 900px;
   margin: 0 auto;
 }
 .wrap #banner .container .container_btm .wrap .bnr_all_contents {
-  background-color: yellow;
-  width: 1200px;
-  margin: 0 auto;
-  height: 786px;
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
+  width: 100%;
+  height: 900px;
+  overflow: visible !important;
 }
-.wrap #banner .container .container_btm .wrap .bnr_all_contents .bnr_contents {
-  background-color: green;
-  width: 75%;
-  display: flex;
-  flex-flow: column nowrap;
+.wrap #banner .container .container_btm .wrap .bnr_all_contents .bnr_contents .banner_img {
+  transform-origin: center;
+  height: 150px;
 }
-.wrap #banner .container .container_btm .wrap .bnr_all_contents .bnr_contents .swiper-slide {
-  display: flex;
-  flex-flow: column wrap;
-}
-.wrap #banner .container .container_btm .wrap .bnr_all_contents .bnr_contents .swiper-slide a {
-  display: inline-block;
-}
-.wrap #banner .container .container_btm .wrap .bnr_all_contents .bnr_contents .swiper-slide a img {
+.wrap #banner .container .container_btm .wrap .bnr_all_contents .bnr_contents .banner_img a img {
   width: 100%;
 }
 .wrap #banner .container .container_btm .wrap .bnr_all_contents .bnr_contents .active {
   transform: scale(1.2);
-  background-color: lime;
+}
+.wrap #banner .container .container_btm .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: -70px;
+}
+.wrap #banner .container .container_btm .swiper-pagination-bullet {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  border: 1px solid #000;
+  opacity: 1;
+}
+.wrap #banner .container .container_btm .swiper-pagination-bullet-active {
+  width: 30px;
+  height: 10px;
+  border-radius: 10px;
+  background: #000;
+}
+.wrap #banner .container .container_btm .swiper-button-next:after, .wrap #banner .container .container_btm .swiper-button-prev:after {
+  display: none;
+}
+.wrap #banner .container .container_btm .swiper-button-prev {
+  left: 160px;
+}
+.wrap #banner .container .container_btm .swiper-button-next {
+  right: 160px;
 }
 .wrap #card {
   position: relative;
@@ -526,7 +524,7 @@ body::-webkit-scrollbar-track {
   font-size: 3rem;
   font-family: "Caveat Brush", serif;
   font-weight: 800;
-  padding: 100px 0 150px 100px;
+  padding: 100px;
   padding: 100px;
 }
 .wrap #card .container .card_contents {
@@ -586,7 +584,7 @@ body::-webkit-scrollbar-track {
   font-size: 3rem;
   font-family: "Caveat Brush", serif;
   font-weight: 800;
-  padding: 100px 0 150px 100px;
+  padding: 100px;
 }
 .wrap #redesign .container .swiper {
   --swiper-scrollbar-border-radius:20px;

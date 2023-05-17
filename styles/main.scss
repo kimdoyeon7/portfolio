@@ -22,7 +22,7 @@ $fontW700:700;
 $fontW800:800;
 $fontW900:900;
 @mixin bigLayout {width:1600px; height:100vh; margin:0 auto;}
-@mixin title {font-size:3rem; font-family:$en_serif; font-weight: $fontW800; padding:100px 0 150px 100px;}
+@mixin title {font-size:3rem; font-family:$en_serif; font-weight: $fontW800; padding:100px /* 0 150px 100px */;}
 // @mixin title2 {font-size:1.5rem; font-family: $en_serif; font-weight: $fontW800;}
 // @mixin title3 {font-size:1.7rem; font-family: $en_serif; font-weight: $fontW800;}
 // @mixin titleBig {font-size:7rem; line-height:1.5; font-family: $en_serif; font-weight:$fontW700;}
@@ -221,7 +221,7 @@ body::-webkit-scrollbar-track {background:transparent;}
                     transition:all 0.3s;
                     .all_contents {
                         overflow:visible !important;
-                        background-color: pink;
+                        // background-color: pink;
                         .contents {
                             position: relative;
                             width:10%;
@@ -249,7 +249,7 @@ body::-webkit-scrollbar-track {background:transparent;}
                     bottom:-70px;
                 }
                 .swiper-pagination-bullet {
-                    width:5px; height:5px; background:transparent; border: 1px solid $colorB; opacity: 1; 
+                    width:5px; height:5px; background:$colorB; opacity: 1; 
                 }
                 .swiper-pagination-bullet-active { width:30px; height:10px; border-radius: 10px; background: $colorB; }
                 .swiper-button-next:after,
@@ -306,7 +306,7 @@ body::-webkit-scrollbar-track {background:transparent;}
         background-color: $colorW;
         .container{
             @include bigLayout(); 
-            background-color: lightcyan;
+            // background-color: lightcyan;
             border-top:1px solid $color1;
             height:max-content;
             // border-right:0; border-left:0;
@@ -320,52 +320,48 @@ body::-webkit-scrollbar-track {background:transparent;}
             }
             h1 {@include title(); padding:100px;}
             .container_btm{
-                background-color: pink;
+                // background-color: pink;
                 position:relative;
                 // height: 100vh; overflow: hidden;
-                padding:100px;
+                padding:0 50px;
                 .wrap {
-                    background-color:red;
+                    // background-color:red;
                     // height:786px; 
-                    // overflow: hidden; 
-                    width:1400px; margin:0 auto;
+                    overflow: hidden; 
+                    padding: 0 50px;
+                    // overflow:visible !important;
+                    width:900px; margin:0 auto;
                     .bnr_all_contents {
-                        background-color: yellow;
-                        width:1200px; margin:0 auto;
-                        height:786px; 
-                        display: flex; flex-flow:column wrap; align-items: center;
-                        // overflow:visible !important;
+                        // background-color: yellow;
+                        // width:1200px;
+                        width:100%;
+                        height:900px;
                         // overflow: hidden;
-                        // position:relative; 
-                        // position:absolute;
-                        // z-index:999;
-                        // padding:0 100px;
-                        // height:872px; 
-                        // overflow: hidden;
+                        overflow:visible !important;
                         .bnr_contents {
-                            background-color: green;
-                            width:75%; 
+                            // background-color: green;
                             // height:100%;
-                            // position:absolute; z-index:99;
-                            display:flex; flex-flow:column nowrap; 
-                            // position:absolute;
-                            .swiper-slide {
-                                display:flex; flex-flow:column wrap; 
+                            .banner_img {
+                                // margin:0;
+                                transform-origin:center ;
+                                height:150px;
+                                //  !important;
+                                // overflow: hidden;
                                 a {
-                                    display: inline-block;
                                     // background-color: blue;
                                     img{width:100%;}
                                 }
                             }//e:swiper-slide
                             .active {
                                 transform:scale(1.2); 
-                                // !important;
-                                background-color: lime;
+                                // transform-origin:center;
+                                // overflow:visible !important;
+                                // background-color: lime;
                             }
                         }//e:contents
                     }//e:all_contents
                 }
-                /* .swiper-pagination {
+                .swiper-pagination {
                     // background: lime;
                     display:flex; justify-content: center; align-items: center;
                     bottom:-70px;
@@ -374,11 +370,9 @@ body::-webkit-scrollbar-track {background:transparent;}
                     width:5px; height:5px; background:transparent; border: 1px solid $colorB; opacity: 1; 
                 }
                 .swiper-pagination-bullet-active { width:30px; height:10px; border-radius: 10px; background: $colorB; }
-                .swiper-button-next:after,
-                .swiper-button-prev:after {
-                    display: none;
-                } */
-                // .swiper-button-next {right:-50px;}
+                .swiper-button-next:after, .swiper-button-prev:after {display: none;}
+                .swiper-button-prev {left:160px;}
+                .swiper-button-next {right:160px;}
             }
         }
     }
