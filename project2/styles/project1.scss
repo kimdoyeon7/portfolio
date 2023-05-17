@@ -8,8 +8,8 @@ $colorB:#000;
 $colorW:#fff;
 
 @mixin layout {width:80%; margin:0 auto;}
-@mixin font1{font-family: 'KBO-Dia-Gothic-medium'; font-weight:500;}
-@mixin titleH1 {font-family: 'KBO-Dia-Gothic-bold'; font-weight:700; font-size:2rem;}
+@mixin font1{font-family: 'KBO-Dia-Gothic_medium'; font-weight:500;}
+@mixin titleH1 {font-family: 'KBO-Dia-Gothic_bold'; font-weight:700; font-size:2rem;}
 // @mixin titleP {font-family: 'KBO-Dia-Gothic-light'; font-weight:300;}
 
 

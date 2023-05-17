@@ -29,7 +29,7 @@ header .container .main_nav > ul > li {
   position: relative;
 }
 header .container .main_nav > ul > li > a {
-  font-family: "KBO-Dia-Gothic-medium";
+  font-family: "KBO-Dia-Gothic_medium";
   font-weight: 500;
   line-height: 50px;
   margin-right: 20px;
@@ -80,7 +80,7 @@ header .container .re_nav > ul > li {
   position: relative;
 }
 header .container .re_nav > ul > li > a {
-  font-family: "KBO-Dia-Gothic-medium";
+  font-family: "KBO-Dia-Gothic_medium";
   font-weight: 500;
   line-height: 50px;
   margin-right: 20px;
@@ -163,7 +163,7 @@ header .containerBg {
   padding: 50px 70px;
 }
 #shopping .container .title h1 {
-  font-family: "KBO-Dia-Gothic-bold";
+  font-family: "KBO-Dia-Gothic_bold";
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: 15px;
@@ -237,7 +237,7 @@ header .containerBg {
   text-align: left;
 }
 #month_event .container .title h1 {
-  font-family: "KBO-Dia-Gothic-bold";
+  font-family: "KBO-Dia-Gothic_bold";
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: 15px;
@@ -264,7 +264,7 @@ header .containerBg {
   width: 100%;
 }
 #month_event .container h2 {
-  font-family: "KBO-Dia-Gothic-bold";
+  font-family: "KBO-Dia-Gothic_bold";
   font-weight: 700;
   font-size: 2rem;
 }

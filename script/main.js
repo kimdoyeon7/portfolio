@@ -1,3 +1,9 @@
+window.onload = function(){
+    setTimeout(function(){
+        scrollTo(0,0);
+    },100)
+}
+
 // sns -> Slides per view
 const big_img = document.querySelector('#project_view')
 const swiper_sns = document.querySelectorAll('#sns .all_contents .swiper-slide')

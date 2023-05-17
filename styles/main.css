@@ -134,7 +134,7 @@ body::-webkit-scrollbar-track {
   right: 15px;
 }
 .wrap #intro .container h1 {
-  font-family: "Caveat Brush", serif;
+  font-family: "Caveat Brush", cursive;
   font-size: 7rem;
   padding: 243px 170px 0;
 }
@@ -195,7 +195,7 @@ body::-webkit-scrollbar-track {
 }
 .wrap #info .container .contents .aboutMe h2 span, .wrap #info .container .contents .skillTool h2 span {
   font-size: 3rem;
-  font-family: "Caveat Brush", serif;
+  font-family: "Caveat Brush", cursive;
   font-weight: 700;
   display: inline-block;
   animation: titleUp 1.3s ease infinite alternate;
@@ -239,7 +239,7 @@ body::-webkit-scrollbar-track {
   line-height: 1.2;
 }
 .wrap #info .container .contents .aboutMe dl dt {
-  font-family: "Caveat Brush", serif;
+  font-family: "Caveat Brush", cursive;
   font-size: 2rem;
   font-weight: 500;
   margin-right: 20px;
@@ -299,7 +299,7 @@ body::-webkit-scrollbar-track {
 }
 .wrap #sns .container h1 {
   font-size: 3rem;
-  font-family: "Caveat Brush", serif;
+  font-family: "Caveat Brush", cursive;
   font-weight: 800;
   padding: 100px;
 }
@@ -380,7 +380,7 @@ body::-webkit-scrollbar-track {
 }
 .wrap #detail .container h1 {
   font-size: 3rem;
-  font-family: "Caveat Brush", serif;
+  font-family: "Caveat Brush", cursive;
   font-weight: 800;
   padding: 100px;
 }
@@ -442,7 +442,7 @@ body::-webkit-scrollbar-track {
 }
 .wrap #banner .container h1 {
   font-size: 3rem;
-  font-family: "Caveat Brush", serif;
+  font-family: "Caveat Brush", cursive;
   font-weight: 800;
   padding: 100px;
   padding: 100px;
@@ -522,7 +522,7 @@ body::-webkit-scrollbar-track {
 }
 .wrap #card .container h1 {
   font-size: 3rem;
-  font-family: "Caveat Brush", serif;
+  font-family: "Caveat Brush", cursive;
   font-weight: 800;
   padding: 100px;
   padding: 100px;
@@ -582,7 +582,7 @@ body::-webkit-scrollbar-track {
 }
 .wrap #redesign .container h1 {
   font-size: 3rem;
-  font-family: "Caveat Brush", serif;
+  font-family: "Caveat Brush", cursive;
   font-weight: 800;
   padding: 100px;
 }
@@ -675,7 +675,7 @@ body::-webkit-scrollbar-track {
   justify-content: space-between;
 }
 .wrap #footer .container h1 {
-  font-family: "Caveat Brush", serif;
+  font-family: "Caveat Brush", cursive;
   font-size: 7rem;
   padding-top: 150px;
 }
