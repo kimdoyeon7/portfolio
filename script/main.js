@@ -5,12 +5,24 @@ window.onload = function(){
 }
 
 // sns -> Slides per view
+const body = document.querySelectorAll('body')
 const big_img = document.querySelector('#project_view')
 const swiper_sns = document.querySelectorAll('#sns .all_contents .swiper-slide')
 let imgC = document.createElement('img')
 big_img.style.display = 'none'
 
 //------------------------------------------------------------------
+// 모달 팝업 즉, big_img.children[0].appendChild 눌렀을때 스크롤 안되게끔
+// big_img.children[0].appendChild
+// document.querySelectorAll('body')[0].style.overflow = 'hidden';
+
+
+
+
+
+
+
+
 //-----이미지 크게 나오도록 --------------------------
 // sns swiper 
 swiper_sns.forEach((t,i)=>{
@@ -21,6 +33,7 @@ swiper_sns.forEach((t,i)=>{
         imgC.src = `./images/sns_design_${i+1}.jpg`
         big_img.style.display = 'block'
         big_img.children[0].appendChild(imgC)
+        body[0].style.overflow = 'hidden'
         /* big_img.innerHTML = i+1
         big_img.style.display = 'block' */
     })
@@ -28,6 +41,7 @@ swiper_sns.forEach((t,i)=>{
 
 big_img.addEventListener('click',()=>{
     big_img.style.display = 'none'
+    body[0].style.overflow = 'scroll'
 })
 
 // detail a img 누르면 크게 나오도록
@@ -39,8 +53,11 @@ detail_img.forEach((t,i)=>{
         imgC.src = `./images/detail${i+1}.jpg`
         big_img.style.display = 'block'
         big_img.children[0].appendChild(imgC)
+        big_img.style.scrollTo = 'none'
         console.log(this)
         imgC.parentElement.scrollTo(0,0)
+        body[0].style.overflow = 'hidden'
+        // document.querySelectorAll('body')[0].style.overflow = 'hidden'; // 배경스크롤 막아주는 기능
         // big_img.parentNode.scrollTo(0,0)
     })
 })
@@ -49,6 +66,7 @@ detail_img.forEach((t,i)=>{
 
 // banner 이미지  누르면 크게 나오도록 
 const bnr_img = document.querySelectorAll('#banner .bnr_contents a')
+// const bnr_big_img = document.querySelector('#project_view .contents img')
 
 bnr_img.forEach((t,i)=>{
     t.addEventListener('click',(e)=>{
@@ -58,6 +76,8 @@ bnr_img.forEach((t,i)=>{
         imgC.src = `./images/banner${i+1}.jpg`
         big_img.style.display = 'block'
         big_img.children[0].appendChild(imgC)
+        body[0].style.overflow = 'hidden'
+        // bnr_big_img.style.width = '1300px'
         /* big_sns.innerHTML = i+1
         big_sns.style.display = 'block' */
     })
@@ -76,6 +96,7 @@ card_img.forEach((t,i)=>{
         big_img.style.display = 'block'
         big_img.children[0].appendChild(imgC)
         console.log(this)
+        body[0].style.overflow = 'hidden'
         imgC.parentElement.scrollTo(0,0) // 다른 이미지 클릭 시 스크롤 위로
         // big_sns-webkit-scrollbar-width:10px;
     })

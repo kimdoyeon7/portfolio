@@ -1,4 +1,26 @@
 // body{background-color: yellow;}
+@font-face {
+    font-family: 'GmarketSanslight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} 
+@font-face {
+    font-family: 'GmarketSansbold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} 
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
 $maincolor:#d9c1af;
 $colorB:#000;
 $colorW:#fff;
@@ -84,12 +106,6 @@ header{
             
         }
     }
-    .bg {
-        // background-image: url(../images/bg.png); background-repeat: no-repeat;
-        // background-size:cover; width:100%; height:200vh;
-        // background-position: center; 
-        // background-attachment: fixed;
-    }
 }
 
 main{
@@ -99,7 +115,7 @@ main{
         .slogan { 
             margin:200px 0;
             p:first-child {font-family:$en_serif; font-size:5rem;}
-            p:last-child {font-size:1.8rem; margin-top:15px;}
+            p:last-child {font-size:1.7rem; margin-top:15px;}
         }
         .md_pick {
             background-color: aquamarisne;

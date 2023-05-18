@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "GmarketSanslight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansbold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   background-color: #d9c1af;
 }
@@ -83,6 +101,7 @@ header .wrap .nav_wrap .main_nav .user .user_link > a:hover {
 header .wrap .nav_wrap .main_nav .user > a:hover {
   background-image: url(../images/user_b.png);
 }
+
 main .wrap {
   width: 85%;
   margin: 0px auto;
@@ -95,7 +114,7 @@ main .wrap .slogan p:first-child {
   font-size: 5rem;
 }
 main .wrap .slogan p:last-child {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   margin-top: 15px;
 }
 main .wrap .md_pick {
