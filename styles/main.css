@@ -87,6 +87,7 @@ body::-webkit-scrollbar-track {
 
 .wrap {
   overflow-x: hidden;
+  /* 가로배너용 */
 }
 .wrap #project_view {
   position: fixed;
@@ -97,7 +98,6 @@ body::-webkit-scrollbar-track {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding-top: 80px;
   cursor: url(../images/cursor2.png), auto;
   overflow: hidden;
   position: fixed;
@@ -105,7 +105,7 @@ body::-webkit-scrollbar-track {
 .wrap #project_view .contents {
   width: -moz-max-content;
   width: max-content;
-  margin: 0 auto;
+  margin: 80px auto 0;
   height: 84vh;
   overflow-y: auto;
 }
@@ -120,6 +120,39 @@ body::-webkit-scrollbar-track {
   border-radius: 5px;
 }
 .wrap #project_view .contents::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.wrap #project_view2 {
+  position: fixed;
+  z-index: 1001;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 1100%;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: url(../images/cursor2.png), auto;
+  overflow: hidden;
+  position: fixed;
+}
+.wrap #project_view2 .contents {
+  width: 1200px;
+  margin: 300px auto 0;
+  height: -moz-max-content;
+  height: max-content;
+  overflow-y: auto;
+}
+.wrap #project_view2 .contents img {
+  width: 100%;
+}
+.wrap #project_view2 .contents::-webkit-scrollbar {
+  width: 10px;
+}
+.wrap #project_view2 .contents::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 5px;
+}
+.wrap #project_view2 .contents::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .wrap #intro {

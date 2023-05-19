@@ -192,28 +192,4 @@ main .wrap .md_pick .product_wrap .product_container .product2, main .wrap .md_p
   top: 0;
 }
 
-footer {
-  background-color: #000;
-  padding: 50px 0;
-}
-footer .wrap {
-  display: flex;
-  justify-content: space-between;
-  width: 85%;
-  margin: 0px auto;
-}
-footer .wrap > * {
-  color: #fff;
-}
-footer .wrap h1 {
-  width: 120px;
-}
-footer .wrap h1 a img {
-  width: 100%;
-}
-footer .wrap .privacy {
-  text-align: right;
-}
-footer .wrap .privacy p {
-  line-height: 2;
-}/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
