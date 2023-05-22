@@ -402,8 +402,7 @@ body::-webkit-scrollbar-track {
 }
 .wrap #detail .container {
   width: 1600px;
-  height: 100vh;
-  margin: 0 auto;
+  margin: 0 auto 50px;
 }
 .wrap #detail .container h1::before {
   content: "";
@@ -425,6 +424,7 @@ body::-webkit-scrollbar-track {
 .wrap #detail .container .detail_contents {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  row-gap: 40px;
 }
 .wrap #detail .container .detail_contents .contents {
   justify-content: center;

@@ -289,7 +289,8 @@ body::-webkit-scrollbar-track {background:transparent;}
     #detail {
         position:relative;
         .container {
-            @include bigLayout();
+            // @include bigLayout();
+            width:1600px; margin:0 auto 50px;
             // background-color: aquamarine;
             // border-bottom:1px solid $color4;
             h1::before{
@@ -302,7 +303,7 @@ body::-webkit-scrollbar-track {background:transparent;}
             }
             h1 {@include title();}
             .detail_contents {
-                display:grid; grid-template-columns: repeat(3,1fr);
+                display:grid; grid-template-columns: repeat(3,1fr); row-gap:40px;
                 .contents {
                     justify-content: center; 
                     text-align: center;
